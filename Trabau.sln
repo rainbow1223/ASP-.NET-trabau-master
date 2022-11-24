@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Web", "Web\", "{FE11BFD2-1F94-45D1-A2A9-3C96D3AD33B6}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		ProjectReferences = "{8d846879-65d2-49fa-a38e-72c093729567}|TrabauClassLibrary.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_26011"
+		Debug.AspNetCompiler.PhysicalPath = "Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_26011\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_26011"
+		Release.AspNetCompiler.PhysicalPath = "Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_26011\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "26011"
+		SlnRelativePath = "Web\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrabauClassLibrary", "TrabauClassLibrary\TrabauClassLibrary\TrabauClassLibrary.csproj", "{8D846879-65D2-49FA-A38E-72C093729567}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrabauAPI", "TrabauAPI\TrabauAPI.csproj", "{214D4E17-C07C-453C-9703-55BD75E7BE4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trabau.DataAccess", "Trabau.DataAccess\Trabau.DataAccess.csproj", "{92DF5405-A471-4908-AE27-9B8124D1DD0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trabau.Common", "Trabau.Common\Trabau.Common.csproj", "{C3B93083-25C7-4119-8BEE-025B2CE2C86C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE11BFD2-1F94-45D1-A2A9-3C96D3AD33B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE11BFD2-1F94-45D1-A2A9-3C96D3AD33B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE11BFD2-1F94-45D1-A2A9-3C96D3AD33B6}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE11BFD2-1F94-45D1-A2A9-3C96D3AD33B6}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{8D846879-65D2-49FA-A38E-72C093729567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D846879-65D2-49FA-A38E-72C093729567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D846879-65D2-49FA-A38E-72C093729567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D846879-65D2-49FA-A38E-72C093729567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{214D4E17-C07C-453C-9703-55BD75E7BE4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{214D4E17-C07C-453C-9703-55BD75E7BE4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{214D4E17-C07C-453C-9703-55BD75E7BE4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{214D4E17-C07C-453C-9703-55BD75E7BE4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92DF5405-A471-4908-AE27-9B8124D1DD0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92DF5405-A471-4908-AE27-9B8124D1DD0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92DF5405-A471-4908-AE27-9B8124D1DD0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92DF5405-A471-4908-AE27-9B8124D1DD0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3B93083-25C7-4119-8BEE-025B2CE2C86C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3B93083-25C7-4119-8BEE-025B2CE2C86C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3B93083-25C7-4119-8BEE-025B2CE2C86C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3B93083-25C7-4119-8BEE-025B2CE2C86C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DA7206CC-F062-4900-ABF7-2D4436546F99}
+	EndGlobalSection
+EndGlobal
