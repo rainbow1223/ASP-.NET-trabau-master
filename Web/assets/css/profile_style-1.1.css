@@ -1,0 +1,103 @@
+﻿  
+    .my-profile-picture {margin-right: 10px !important;position:relative;cursor:pointer;}
+    .my-profile-picture .edit-pencil-button{position: absolute;right: -6px;top: -10px;background: #fff;display:none;}
+    .my-profile-picture img {border: medium none;max-width: 100%;overflow: hidden;vertical-align: middle;}
+
+    
+   
+    .progress-bar-parent {height: 4px;-webkit-box-shadow: none;box-shadow: none;background-color: #E0E0E0;overflow: visible;border-radius: 0;}
+    .progress-bar-override {background-color: #14BFF4;height: 4px;-webkit-box-shadow: none;box-shadow: none;color: #222;}
+    .location .location-main{color:#000;font-weight: 400;margin-left:10px;}
+    .location .location-timezone{color:#808080;}
+    .progress-bar-mobile{display:none}
+    .progress-bar-percentage{font-size:14px;}
+    
+    .profile-text{-webkit-box-flex: 1;-ms-flex: 1 1 0%;flex: 1 1 0%;min-width: 0;}
+    .profile-top{margin-bottom: 30px;}
+    .profile-details-top  h3{line-height: 24px;font-size: 17px;font-weight: 500;}
+    .profile-details-bottom p{white-space:pre-line;line-height:21px;}
+   
+    .skills{padding: 5px 10px;background:#d2cccc;color:#111;border-radius: 4px;font-size: 12px;display: inline-block;margin-bottom:10px;}
+    .skills:hover{background-color: #0bbc56;color: #fff;cursor:pointer;}
+.btn-profile-settings a {
+    color: #0bbc56;
+    background-color: #fff;
+    border-color: transparent;
+    padding: 11px 28px;
+    padding-right: 28px;
+    padding-left: 28px;
+    font-size: 14px;
+    line-height: 14px;
+    border-radius: 2px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: solid 2px transparent;
+    display: inline-block;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    margin: 0 20px 30px 0;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap;
+    background-image: none.profile-sidebar -webkit-transition: all .15s;
+    transition: all .15s;
+    -webkit-box-shadow: 0 1px 6px rgba(57,73,76,0.35);
+    box-shadow: 0 1px 6px rgba(57,73,76,0.35);
+    text-decoration: none;
+    width: 100%;
+}
+    .profile-availablilty h4{padding-bottom:20px;}
+    .profile-details-top .profile-details-title-edit,.profile-details-bottom .profile-details-overview-edit{display:none;margin-left:10px;position:absolute;right:0px;top:0px;}
+    .profile-details-top h3,.profile-details-bottom p{position:relative;}
+    .profile-details-top h3:hover,.profile-details-bottom p:hover{background-color: #f9f9f9;color: #000;}
+    .profile-details-top{padding:10px 0;}
+    .btn-profile-settings a:hover{color:#15b357;}
+    .portfolio-items img{width:100%;}
+    .portfolio-items:hover{background-color: #000;opacity:0.6;cursor:pointer;}
+    .portfolio-items{position:relative;}
+    .profile-rate-details{margin-top:20px;margin-bottom: 20px;}
+    .profile-rate-details ul li{display:inline-block;width: 140px !important;min-width: 140px !important;}
+    .profile-rate-item-top{line-height: 24px;font-size: 17px;font-weight: 500;margin-bottom: 5px !important;}
+    .profile-rate-item-bottom{color: #595858 !important}
+    .profile-rate-item-top .edit-pencil-button{display: none;margin-left: 10px;position:absolute}
+    .hourly-rate-units{position: absolute;right: 120px;top: 13px;font-weight: bold;}
+    div[id*="upHourlyRate"] input[type=text]{display:inline-block;width:90%;padding-left:50px;padding-right:70px;}
+    .hourly-currency{position: absolute;left: 20px;top: 19px;}
+    .profile-rate-item-top span:hover{background-color: #f9f9f9;color: #000;}
+    .right-profile-main{margin-bottom:20px;}
+    .right-profile-content{margin-top:5px;}
+    .right-profile-main h4{font-size:16px;}
+    .right-profile-content span{margin-left:5px;}
+    .profile-not-avail{padding:10px;box-shadow: 0 1px 6px rgba(57,73,76,0.35);}
+
+
+@media only screen and ( max-width: 479px) {
+    .location .location-timezone{display:block;}
+    .profile-progress-bar{display:block;}
+    .progress-bar-big{display:none;}
+    .progress-bar-mobile{display:block;position:relative;}
+    .progress-bar-percentage{font-size:13px;}
+    .edit-pencil-button,.edit-button,.profile-details-title-edit,.profile-details-overview-edit{display:inline-block !important;}
+    .profile-details-top .profile-details-title-edit, .profile-details-bottom .profile-details-overview-edit{right:-20px;}
+}
+@media only screen and ( max-width: 500px) {
+     .profile-rate-details ul li{margin-top:10px;}
+}
+@media only screen and ( min-width: 480px) {
+    .col-sm-8 {-webkit-box-flex: 0;-ms-flex: 0 0 66.66667%;flex: 0 0 66.66667%;max-width: 66.66667%;}
+    .col-sm-4 {-webkit-box-flex: 0;-ms-flex: 0 0 33.33333%;flex: 0 0 33.33333%;max-width: 33.33333%;}
+   
+}
+@media only screen and ( max-width: 767px) {
+        .container, .container-sm {width: 100% !important;max-width: 100% !important;padding-right: 15px !important;padding-left: 15px !important;margin-right: auto !important;margin-left: auto !important;}
+}
+@media only screen and ( min-width: 992px) {
+    .profile-sidebar{display:block}
+}

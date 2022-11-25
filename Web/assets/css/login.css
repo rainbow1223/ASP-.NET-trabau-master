@@ -1,0 +1,99 @@
+﻿.linkedin-button {
+    border: 1px solid #0077B5;
+    border-radius: .25rem;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.0rem;
+    font-weight: 600;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    height: 56px;
+    width: 100%;
+    line-height: normal;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0077B5;
+    margin-bottom: 10px;
+}
+
+    .linkedin-button a {
+        color: #fff;
+        height: 56px;
+        line-height: 56px;
+        width: 100%;
+    }
+
+    .linkedin-button svg {
+        margin-bottom: 3px;
+    }
+
+.fb-button {
+    border: 1px solid #4285f4;
+    border-radius: .25rem;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.0rem;
+    font-weight: 600;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    height: 56px;
+    width: 100%;
+    line-height: normal;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3B5998;
+    margin-bottom: 10px;
+}
+
+    .fb-button a {
+        color: #fff;
+        height: 56px;
+        line-height: 56px;
+        width: 100%;
+    }
+
+
+.googlebutton {
+    border: 1px solid #4285f4;
+    border-radius: .25rem;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.0rem;
+    font-weight: 600;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    height: 56px;
+    width: 100%;
+    line-height: normal;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #4285f4 !important;
+    margin-bottom: 10px;
+}
+
+    .googlebutton a {
+        height: 56px;
+        width: 100%;
+        line-height: 56px;
+    }
+
+        .googlebutton a icon {
+            position: relative;
+            top: -2px;
+        }

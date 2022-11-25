@@ -1,0 +1,108 @@
+
+@media only screen and ( max-width: 1199px){ 
+	.bannerContent h2{ font-size: 44px; line-height: 48px;}
+}
+@media only screen and ( max-width: 991px){   
+	.heroBanner{ height: 650px}
+	.bannerContent{ top: 0}
+	.bannerGraphic{ max-width: 380px; margin: auto}
+	.mainSearchForm{ bottom: 350px}
+	.bottom-sec .main-heading{ margin-bottom: 20px}
+	.bottom-sec .text-right{ text-align: left !important;}
+	.search-wrapper{ width: 172px; margin-left: 20px;}
+	.main-nav ul li{ margin-left: 20px;}
+	
+	
+	/*mobile navigation*/
+	body{ padding-top: 67px; }
+	.logo{ float: none !important; text-align: center}
+	.logo a{ width: 168px}
+	.main-nav{ position: fixed; right: 0; top: 0; bottom: 0; background: #fff; z-index: 10; overflow: auto; padding: 15px; width: 100%; left: -100%; transition: all 0.2s ease-in-out 0s;}
+	.main-nav ul li{ display: block; margin: 0 -15px !important;}
+	.main-nav ul li a{ display: block; padding: 10px 15px; border-bottom: 1px solid #ddd;}
+	.main-nav .cta-btn-sm{ display: inline-block!important; margin: 15px 0 0 15px}
+	.mobNav-header{ display: block !important; margin-bottom: 15px}
+	.menuIcon{ display: block !important; position: absolute; left: 15px; top: 14px; font-size: 27px}
+	.mobNav-header .menuIcon{ font-size: 24px}
+	.main-nav.swap{ left: 0; transition: all 0.2s ease-in-out 0s;}
+	
+	.menuIcon1{ display: block !important; position: absolute; right: 15px; top: 14px; font-size: 27px}
+	.search-wrapper.swap {
+		opacity: 1;
+		visibility: visible;
+		right: 0;
+		transition: all 0.4s ease-in-out 0s;
+	}
+	.search-wrapper .flaticon-close{ display: block !important;}
+	.main-nav ul{ float: none !important;}
+	
+	.user-menu .dropdown-menu{ top: 60px !important; transform: none !important; width: 100%; display: block !important; position: static !important; box-shadow: none;}
+	.user-menu .dropdown-toggle{ display: none}
+	
+	.search-wrapper{ 
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		right: -100%;
+		width: 100%;
+		margin: 0;
+		top: 0;
+		background: #fff;
+		padding: 13px 15px;
+		transition: all 0.4s ease-in-out 0s;
+	}
+	
+}
+@media only screen and ( max-width: 767px){  
+	.bannerContent h2{ font-size: 36px; line-height: 38px}
+	.main-heading h2{ font-size: 30px; line-height: 34px;}
+	.p-80{ padding: 60px 0}
+	.p-60{ padding: 40px 0}
+	.discover-content{ max-width: 100%}
+	.bannerGraphic{ max-width: 290px; position: relative; bottom: -40px}
+	.bannerContent{ top: -75px}
+	.frmJob-input{ width: 295px}
+	.mainSearchForm{ bottom: 390px}
+	.copyrights-row{ text-align: center}
+	.copyrights-row span{ position: static; transform: none}
+	.copyrights-row ul{ position: static; margin: 20px 0}
+	.copyrights-row p{ position: static}
+	footer{ padding: 40px 0}
+	.footerLinks ul{ margin-bottom: 20px}
+	.video-play-button{ transform: scale(0.7); transform-origin: -100% -100%;}
+	
+	
+	
+	
+}
+@media only screen and ( max-width: 575px){  
+	.heroBanner{ height: 700px}
+	.mainSearchForm{ bottom: 280px}
+	.frmJob-input{ width: 100%}
+	.mainSearchForm form span{display: block; text-align: center; margin: 10px 0}
+	.mainSearchForm form a{ display: block; text-align: center; width: 210px; margin: auto}
+	.bannerGraphic{ bottom: -90px; max-width: 270px; }
+	.howWork-content .col-6{ max-width: 100%; flex: 0 0 100%;}
+	.copyrights-row{ margin-top: 40px}
+	.cta-btn-md{ font-size: 14px; line-height: 47px; height: 47px; padding: 0 22px}
+	.bannerContent{ text-align: center}
+	
+	.off-canvas-container{ padding: 0 0 40px}
+	.air-card{ padding: 40px 30px;}
+	.air-card h4{ font-size: 18px;}
+}
+@media only screen and ( max-width: 479px){  
+	.heroBannerNew img { width: auto; height: 142px; position: relative; left: 50%; transform: translateX(-50%);}
+	.carousel-indicators{ margin-bottom: 0}
+	.carousel-control-next, .carousel-control-prev{ display: none}
+	.bannerContent h2{ font-size: 30px; line-height: 32px}
+	.bannerContent h2 br{ display: none}
+	.main-heading h2{ font-size: 28px; line-height: 30px;}
+	.p-80{ padding: 40px 0}
+	.p-60{ padding: 30px 0}
+	.bannerGraphic{ bottom: -100px; max-width: 250px; }
+	.sl-bg-img{ background-position: 80% 0 !important}
+	
+	.air-card h4{ font-size: 16px; margin-bottom: 12px;}
+	.otherFrmDet p{ font-size: 13px;}
+}

@@ -1,0 +1,58 @@
+﻿.multipleInput-container {
+    border: 1px solid #d6d6d6;
+    padding: 6px;
+    padding-bottom: 0;
+    cursor: text;
+    font-size: 15px;
+    width: 100%;
+    border-radius: 6px;
+    position: relative;
+    min-height: 45px;
+    max-height: 200px;
+}
+
+    .multipleInput-container input {
+        font-size: 15px;
+        clear: both;
+        border: 0;
+        margin-bottom: 1px;
+        position: absolute;
+        top: 6px;
+        margin-left: 6px;
+    }
+
+    .multipleInput-container ul {
+        list-style-type: none;
+        /*margin-left: -36px;*/
+    }
+
+li.multipleInput-email {
+    float: left;
+    border: 1px solid #f29900;
+    border-radius: 12px;
+    margin: 2px 0;
+    padding-left: 8px;
+    height: 20px;
+    line-height: 20px;
+    box-sizing: border-box;
+    align-items: center;
+    background-color: #fff;
+    font-size: 12px;
+    padding-right: 8px;
+    padding-bottom: 21px;
+}
+
+.multipleInput-close {
+    height: 16px;
+    opacity: .54;
+    width: 16px;
+    background-image: url('assets/uploads/close_black_16dp.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    margin-left: 4px;
+}
+
+.multipleInput-email a {
+    cursor: pointer;
+}

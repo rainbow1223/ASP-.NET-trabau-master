@@ -1,0 +1,131 @@
+﻿.projectSteps-bg {
+    background-color: #f2f2f2;
+    background-image: url('../uploads/paper-plane.png');
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    background-size: 300px;
+    padding-bottom: 0 !important;
+}
+
+.steps-point-circle {
+    text-align: center;
+}
+
+    .steps-point-circle ul li.process {
+        border-color: #0bbc56;
+    }
+
+    .steps-point-circle ul li {
+        list-style-type: none;
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        border: 2px solid #ddd;
+        border-top-color: rgb(221, 221, 221);
+        border-right-color: rgb(221, 221, 221);
+        border-bottom-color: rgb(221, 221, 221);
+        border-left-color: rgb(221, 221, 221);
+        border-radius: 50%;
+        margin: 0 10px;
+    }
+
+        .steps-point-circle ul li.active {
+            background: #0bbc56;
+            border-color: #0bbc56;
+        }
+
+.steps-point-heading {
+    text-align: center;
+    padding-top: 40px;
+}
+
+    .steps-point-heading h3 {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .steps-point-heading span {
+        color: #666;
+        font-size: 12px;
+    }
+
+.new-project-steps {
+    background: #f2f2f2;
+}
+
+
+.warning-content-config h6 {
+    color: #fff;
+}
+
+.warning-container {
+    position: relative;
+}
+
+    .warning-container .warning-content-config {
+        position: absolute;
+        right: 20px;
+        top: 30px;
+    }
+
+.warning-content-message {
+    padding: 0 30px 10px;
+    color: red;
+}
+
+.myCard-body .file-upload, .apply-job-files .file-upload {
+    height: 80px !important;
+    padding: 0;
+}
+
+div[id*="afuProjectFiles"] div {
+    position: relative;
+    top: 35px;
+}
+
+div[id*="afuProjectFiles"] label {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10%;
+    bottom: 0;
+    margin: auto;
+}
+
+div[id*="afuProjectFiles"] input[type="file"] {
+    color: transparent;
+    width: 100% !important;
+    position: relative;
+    z-index: 999;
+    cursor: pointer;
+    height: 95px;
+    opacity: 0;
+    top: -30px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow, .select2-container .select2-selection--single .select2-selection__rendered {
+    margin-top: 8px !important;
+    font-weight: 400;
+    color: #6c757d !important;
+    font-size: 1rem;
+}
+
+.select2-container--default .select2-selection--single {
+    height: 53px !important;
+}
+
+.popover {
+    max-width: 500px !important;
+}
+
+#vm_desc {
+    cursor: pointer;
+    font-weight: bold
+}
+
+
+@media only screen and ( max-width: 991px) {
+    .popover {
+        max-width: 276px !important;
+    }
+}

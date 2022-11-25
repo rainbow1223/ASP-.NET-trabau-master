@@ -1,0 +1,133 @@
+﻿.side-menu .scroll-wrapper {
+    height: 100% !important;
+}
+
+.side-menu {
+    width: 250px;
+    z-index: 99;
+    background: #fff;
+    bottom: 0;
+    margin-top: 0;
+    position: fixed;
+    top: 73px;
+    overflow-y: auto;
+    border: 1px solid rgba(0,0,0,0.1);
+    display: none;
+}
+
+#sidebar-menu {
+    padding-top: 10px;
+}
+
+.metismenu {
+    padding: 0;
+}
+
+#side-menu .menu-title {
+    padding: 0px 0px 0px 20px !important;
+}
+
+#side-menu li {
+    display: block;
+}
+
+#side-menu ul, #side-menu li {
+    list-style: none;
+    line-height: 25px;
+    cursor: pointer;
+}
+
+.menu-title {
+    padding: 12px 20px !important;
+    letter-spacing: 1px;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #0bbc56;
+}
+
+#side-menu li {
+    display: block;
+}
+
+#side-menu ul, #side-menu li {
+    list-style: none;
+    line-height: 25px;
+    cursor: pointer;
+}
+
+.waves-effect {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#sidebar-menu > ul > li > a {
+    color: #8699ad;
+    display: block;
+    padding: 12.5px 20px;
+    font-size: 14px;
+    position: relative;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    font-family: Sarabun,sans-serif;
+}
+
+#sidebar-menu ul li a i {
+    vertical-align: middle;
+    font-size: 14.7px;
+    width: 20px;
+    display: inline-block;
+}
+
+#sidebar-menu > ul > li > a > span {
+    vertical-align: middle;
+    margin-left: 7px;
+}
+
+#sidebar-menu ul li a i {
+    vertical-align: middle;
+    font-size: 14.7px;
+    width: 20px;
+    display: inline-block;
+}
+
+#side-menu ul li a {
+    padding: 8px 20px 8px 55px;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out 0s;
+    color: #8699ad;
+    display: block;
+    position: relative;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+}
+
+.container-fluid {
+    padding-left: 0px;
+}
+
+#side-menu ul:last-child li:last-child {
+    padding-bottom: 20px;
+}
+
+.a-trabau-nav p {
+    display: inline;
+}
+
+.close-nav-menu {
+    position: absolute;
+    right: 15px;
+    top: 4px;
+    display: none;
+    font-weight: 500;
+    cursor: pointer;
+}

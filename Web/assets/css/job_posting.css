@@ -1,0 +1,502 @@
+﻿.jobSteps-bg {
+    background-color: #f2f2f2;
+    background-image: url('../uploads/paper-plane.png');
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    background-size: 300px;
+    padding-bottom: 0 !important;
+}
+
+.steps-point-circle {
+    text-align: center
+}
+
+    .steps-point-circle ul li {
+        list-style-type: none;
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        border: 2px solid #ddd;
+        border-radius: 50%;
+        margin: 0 10px;
+    }
+
+        .steps-point-circle ul li.active {
+            background: #0bbc56;
+            border-color: #0bbc56;
+        }
+
+        .steps-point-circle ul li.process {
+            border-color: #0bbc56;
+        }
+
+.steps-point-heading {
+    text-align: center;
+    padding-top: 40px;
+}
+
+    .steps-point-heading h3 {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .steps-point-heading span {
+        color: #666;
+        font-size: 12px;
+    }
+
+.job-post-steps {
+    background: #f2f2f2;
+}
+
+.card-rd-acc label {
+    color: #666;
+    font-size: 13px;
+}
+
+.card-rd-acc input[type=radio] {
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+}
+
+.card-rd-acc .panel-body {
+    padding-left: 23px;
+}
+
+
+.submit-form-btn input:first-child {
+    background: #ddd;
+    color: #000
+}
+
+
+.myCard-body textarea {
+    height: 150px !important;
+    resize: none;
+    padding-top: 10px;
+}
+
+
+
+
+
+.pro-type {
+    padding: 20px;
+    padding-right: 50px;
+    background: #ffffff;
+    border: 1px solid rgba(29, 67, 193, 0.17);
+    position: relative;
+    min-height: 125px;
+}
+
+    .pro-type::after {
+        content: '';
+        height: 20px;
+        width: 20px;
+        background: #fff;
+        border: 2px solid #f1f1f1;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        border-radius: 50%;
+    }
+
+    .pro-type.active::after {
+        border-color: #fff;
+        border-width: 4px;
+        background: #0bbc56;
+    }
+
+
+
+    .pro-type h6 {
+        color: #1d43c1
+    }
+
+    .pro-type p {
+        margin-bottom: 0;
+    }
+
+    .pro-type.active {
+        background: #0bbc56;
+        color: #fff;
+        border-color: #0bbc56
+    }
+
+        .pro-type.active h6 {
+            color: #fff;
+        }
+
+        .pro-type.active p {
+            color: #fff;
+        }
+
+.myCard-body h5 {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 300;
+    color: #000
+}
+
+li.tiked {
+    background: #0bbc56;
+    color: #fff
+}
+
+
+.max-w-input {
+    max-width: 330px;
+}
+
+
+
+.layout-page-content {
+    padding-top: 0px !important
+}
+
+
+
+
+
+
+.special-radio-btn td h6 {
+    color: #1d43c1;
+}
+
+.special-radio-btn-selected input[type=checkbox]:before {
+    content: "\f00c";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 14px;
+    font-size: inherit;
+    text-rendering: auto;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    color: #fff;
+}
+
+.special-radio-btn input[type=checkbox] {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: auto;
+    height: auto;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
+}
+
+    .special-radio-btn input[type=checkbox]:before {
+        content: "\f00c";
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: 14px;
+        font-size: inherit;
+        text-rendering: auto;
+        position: absolute;
+        right: 15px;
+        top: 5px;
+        color: #d8d0d0
+    }
+
+.link-btn {
+    color: #0056b3;
+}
+
+.project-items {
+    margin-top: 10px;
+    padding-inline-start: 20px;
+}
+
+.select2-container ul li span {
+    color: #fff !important;
+}
+
+.select2-container ul li[class*="select2-selection__choice"] {
+    background: #0bbc56 !important;
+    background-color: #0bbc56 !important;
+    color: #fff;
+    font-size: 11px;
+    border-radius: 30px !important;
+    padding: 4px 12px !important;
+    display: inline-block;
+    margin-bottom: 4px;
+    font-weight: normal;
+}
+
+.business-radio-btn td {
+    font-size: 11px;
+    color: #666;
+    background: #e6e6e6;
+    border-radius: 30px;
+    padding: 4px 12px;
+    display: inline-block;
+    margin-bottom: 4px;
+    font-weight: normal;
+}
+
+    .business-radio-btn td label {
+        margin-bottom: 0;
+        cursor: pointer;
+    }
+
+.business-radio-btn input[type=radio] {
+    display: none;
+}
+
+.business-radio-btn .selected {
+    background: #0bbc56;
+    color: #fff;
+}
+
+
+
+.special-radio-btn-selected h6 {
+    color: #fff !important;
+}
+
+.special-radio-btn-selected p {
+    color: #fff;
+}
+
+.dollar {
+    display: inline !important;
+    width: 95% !important;
+}
+
+.project-questions-preview li {
+    padding: 5px 10px;
+}
+
+.job-posting-review-header {
+    padding: 15px 0 0 20px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.jqte_editor, .jqte_source {
+    min-height: 200px !important;
+}
+
+.distance-input {
+    width: 90% !important;
+    display: inline !important;
+}
+
+.special-radio-btn-selected i {
+    color: #fff;
+}
+
+.special-btn td i, .special-btn td h6 {
+    display: inline;
+    color: #fff;
+}
+
+.special-btn td h6 {
+    margin-left: 5px;
+}
+
+.special-btn td input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.special-btn td {
+    border: none;
+    display: inline-block;
+    height: 38px;
+    padding: 0 20px !important;
+    border-radius: 2px;
+    line-height: 38px;
+    background-color: gray;
+    color: #fff !important;
+    font-weight: bold;
+    box-shadow: 0 1px 6px rgba(57,73,76,0.35);
+    position: relative;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.special-btn label {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.special-btn .btn-selected label:before {
+    content: "\f00c";
+    font: normal normal normal 14px/1 FontAwesome;
+    position: absolute;
+    right: 6px;
+    top: 11px;
+}
+
+.special-btn .btn-selected {
+    background-color: #0bbc56;
+}
+
+.people_row {
+    position: relative;
+}
+
+    .people_row hr {
+        width: 100%;
+        margin-top: 0;
+    }
+
+.people_subrow input[type=text] {
+    height: 36px;
+    margin-bottom: 0;
+}
+
+.people_row .select2-container {
+    width: 96% !important;
+}
+
+.row_srno {
+    position: absolute;
+    left: 0;
+    top: 8px;
+}
+
+.row-header {
+    margin-bottom: 10px;
+    color: #1d43c1
+}
+
+div[id*="afuProjectFiles"] input[type=file] {
+    color: transparent;
+    width: 100% !important;
+    position: relative;
+    z-index: 999;
+    cursor: pointer;
+    height: 130px;
+    opacity: 0;
+    top: -30px;
+}
+
+.myCard-body .file-upload, .apply-job-files .file-upload {
+    height: 80px !important;
+    padding: 0;
+}
+
+div[id*="afuProjectFiles"] div {
+    position: relative;
+    /*    top: 35px;*/
+}
+
+div[id*="afuProjectFiles"] label {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 18%;
+    bottom: 0;
+    margin: auto;
+}
+
+@media only screen and ( max-width: 1199px) {
+    .special-radio-btn td {
+        width: 47.70% !important;
+        max-width: 100%;
+    }
+}
+
+@media only screen and ( max-width: 991px) {
+    .special-radio-btn td {
+        width: 97% !important;
+        max-width: 100%;
+    }
+
+    .people_row hr {
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+
+    .special-btn td {
+        margin-bottom: 10px;
+    }
+
+    .row-header {
+        display: none !important;
+    }
+}
+
+@media only screen and ( max-width: 767px) {
+    .special-radio-btn td {
+        width: 96% !important;
+        max-width: 100%;
+    }
+
+    .people_row .col-sm-12 {
+        margin-bottom: 5px;
+    }
+
+    .people_row hr {
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+
+    .special-btn td {
+        margin-bottom: 10px;
+    }
+
+    .row-header {
+        display: none !important;
+    }
+}
+
+@media only screen and ( max-width: 575px) {
+    .special-radio-btn td {
+        width: 96% !important;
+        max-width: 100%;
+    }
+
+    .people_row .col-sm-12 {
+        margin-bottom: 5px;
+    }
+
+    .people_row hr {
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+
+    .special-btn td {
+        margin-bottom: 10px;
+    }
+
+    .row-header {
+        display: none !important;
+    }
+}
+
+@media only screen and ( max-width: 479px) {
+    .special-radio-btn td {
+        width: 94.50% !important;
+        max-width: 100%;
+    }
+
+    .people_row .col-sm-12 {
+        margin-bottom: 5px;
+    }
+
+    .people_row hr {
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+
+    .people_subrow input[type="text"] {
+        margin-bottom: 0px;
+    }
+
+    .special-btn td {
+        margin-bottom: 10px;
+    }
+
+    .row-header {
+        display: none !important;
+    }
+}

@@ -1,0 +1,156 @@
+﻿.projects-result {
+    height: auto;
+}
+
+    .projects-result .project-content {
+        border-bottom: 1px solid #cecece;
+    }
+
+    .projects-result .project-result-top {
+        margin-bottom: 0;
+        line-height: inherit;
+        cursor: pointer;
+        position: relative;
+    }
+
+.project-result-top a {
+    color: #0c9647 !important;
+    font-weight: 500;
+}
+
+.project-result-top .btn-new-project {
+    display: inline-block;
+    margin-left: 10px !important;
+    position: absolute;
+    right: 0;
+    top: -6px;
+}
+
+.projects-result .project-result-top .opj-arrow {
+    margin-right: 10px;
+}
+
+.project-content-details {
+    margin-left: 20px;
+    display: none;
+    margin-top: 20px;
+}
+
+.project-details {
+    padding: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-left: 0;
+    padding-bottom: 5px;
+}
+
+.btn-view-project-details {
+    border: 1px solid #0bbc56;
+    padding: 5px 10px;
+    color: #0bbc56 !important;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.project-actions {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 9;
+}
+
+.profile-card {
+    position: relative;
+}
+
+.project-result-overview {
+    padding: 15px;
+    position: relative;
+}
+
+.new-project {
+    position: absolute;
+    right: 5px;
+    top: 15px;
+}
+
+.new-project-toolip-info {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.project-menu-main {
+    position: relative;
+}
+
+.aproject_menu {
+    background: #fff;
+    position: absolute;
+    right: 6px;
+    top: 14px;
+}
+
+    .aproject_menu i {
+        margin-top: 1px;
+    }
+
+.project-menu::before {
+    content: " ";
+    position: absolute;
+    display: block;
+    top: -7px;
+    border: 8px solid #fff;
+    border-top-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-left-color: rgb(255, 255, 255);
+    border-color: transparent transparent #fff #fff;
+    -webkit-transform: translateX(-50%) rotate(135deg);
+    transform: translateX(-50%) rotate(135deg);
+    -webkit-box-shadow: -2px 2px 3px rgba(57,73,76,0.1);
+    box-shadow: -2px 2px 3px rgba(57,73,76,0.1);
+    left: auto;
+    right: 12px;
+}
+
+.project-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: -7px;
+    font-size: 13px;
+    background: #fff;
+    line-height: 25px;
+    min-width: 170px;
+    z-index: 101;
+    border-radius: 5px;
+    padding-bottom: 5px;
+    padding-left: 0 !important;
+    padding-top: 5px;
+    border: solid 2px transparent;
+    box-shadow: 0 1px 6px rgba(57,73,76,0.35);
+}
+
+    .project-menu li a {
+        color: #000;
+        display: block;
+    }
+
+    .project-menu li {
+        list-style: none !important;
+        cursor: pointer;
+        padding: 0 0 0 10px;
+    }
+
+        .project-menu li:hover {
+            background: #0bbc56;
+        }
+
+            .project-menu li:hover a {
+                color: #fff;
+            }
+
+.btn-new-project-small {
+    display: none !important;
+}

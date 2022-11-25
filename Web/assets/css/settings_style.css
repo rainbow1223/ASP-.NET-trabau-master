@@ -1,0 +1,70 @@
+﻿
+    .leftSideBar {}
+    .leftSideBar h4 {font-size: 18px;font-weight: bold;margin-bottom: 6px;}
+    .leftSideBar ul {margin-bottom: 10px;}
+    .leftSideBar ul li {display: block;list-style-type: none;position:relative;margin-top: 2px;}
+    .leftSideBar ul li a {display: block;padding: 10px 15px;color: #111;font-weight: 500;}
+    .leftSideBar ul li a:hover,.leftSideBar ul li.active a {background: #f1f1f1;color: #0bbc56;}
+    .leftSideBar ul li.active::after{content: " ";position: absolute;border-left: 4px solid #0bbc56;left: 0;right: auto;bottom: 0;top: 0;}
+    .ui-application {}
+    .ui-application h1 {font-size: 30px;margin-bottom: 30px;}
+    .ui-application h2 {font-size: 24px;}
+    .ui-application .air-card {background: #fff;box-shadow: 0 0 10px rgba(0,0,0,0.2);margin-bottom: 30px;padding: 0px;max-width: 100%;}
+  
+   
+    .editCard-btn {border: 0;background: transparent;color: green;}
+    .mobile-link-nav {margin-top: 30px;}
+    .mobile-link-nav h1 {font-size: 30px;}
+    .document_viewer{padding-bottom:20px;}
+    .document_viewer td:first-child{width:40%;word-wrap: break-word;}
+   
+    table[id*="rbtnlVisibility"] td {border: none;padding: 2px;}
+    table[id*="rbtnlVisibility"] td label {padding-left: 6px;}
+    .select2-selection{height: 53px !important;}
+    .document-upload-header{margin-bottom:10px;}
+    .document-upload-header label{margin-bottom:0;}
+    .select2-selection{text-align:left}
+    /*.file-type{right: 17px !important;bottom: 15px !important;}*/
+    .file-req{right: 0px !important;bottom: -19px !important;}
+    .file-upload-control{display:none;}
+    .file-upload{border: 1px solid gray;color: gray;background-color: white;padding: 8px 20px;border-radius: 8px;font-size: 13px;font-weight: bold;}
+    .file-upload-main{display:inline-block;margin-right:30px;}
+    .file-info{font-size: 10px;display: inline-block;width: 135px;position: absolute;}
+    .document-upload-header label{text-align:left;display:block;}
+    .doc_content iframe{width:100%;}
+    .document_viewer i{font-size:16px;}
+    .account-picture,.company-logo{border-bottom: 1px solid #E0E0E0;padding: 20px 30px;}
+    .account-name{padding-top:10px;}
+    .avatar {border-radius: 50%;-o-object-fit: cover;object-fit: cover;color: #E0E0E0;border: solid 1px #E0E0E0;}
+    .avatar-editable{border: 2px dashed transparent;;cursor: pointer;}
+    .avatar:hover {border-color: #0bbc56;}
+    .account-picture input[type=image],.company-logo input[type=image] {width: 100px;height: 100px;margin: 0 20px;padding: 0;}
+    /*.company-details{padding-bottom:0;}*/
+    .company-name{padding:20px;}
+    .company-name p{margin:0;font-weight:bold;}
+    .new-account{margin:20px;}
+    .btn-new-account{margin-top:20px;}
+    .new-user-account .row{padding:10px 15px;}
+    .account-options{margin-bottom:20px;}
+    .account-options a{color:#0bbc56;font-weight:bold;}
+    .account-options a:hover{color:#119348;text-decoration: underline !important;}
+    .new-user-account-header h4{margin-bottom:0 !important;}
+    .new-account-info{padding:30px !important;  }
+    .create-newaccount{padding:40px 0px 40px 30px !important;border-top: 1px solid #cecece;}
+    .newaccount-header{padding-left:5px;}
+    .btn-create-new-account{background: transparent !important;color: #0bbc56 !important;border: none;}
+    .btn-create-new-account:hover{color:#119348;text-decoration: underline !important;}
+    .margin-top-15{margin-top:15px;}
+    .trabau-link,.gmaps-link{color:#0bbc56;}
+    .trabau-link:hover,.gmaps-link:hover{color:#119348;text-decoration: underline !important;}
+    .google-maps-link p label{margin-left: 10px !important;vertical-align: middle;}
+    .google-maps-link p span{display:block;}
+    .gmaps-link{margin-left:10px;}
+    .google-maps-link i{color:#0bbc56}
+
+    @media only screen and ( max-width: 479px) {
+         /*.data-container{padding-left:5px !important;padding-right:5px !important;}
+         .data-container .airCardHeader{padding:5px !important;}*/
+         .data-container .document_viewer{padding-left:0 !important;padding-right:0 !important;}
+         .data-container table th,.data-container table td{font-size:12px;padding:5px;}
+    }

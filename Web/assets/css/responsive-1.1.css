@@ -1,0 +1,1126 @@
+
+@media only screen and ( max-width: 1199px) {
+    .bannerContent h2 {
+        font-size: 38px;
+        line-height: 40px;
+    }
+
+    .search-wrapper {
+        width: 238px !important;
+    }
+
+    .advance-search-input {
+        width: 80% !important;
+    }
+
+    .main-nav {
+        width: 460px;
+    }
+
+    .myTabsSection .tab-content {
+        padding: 10px;
+    }
+
+    .btn-profile-action {
+        font-size: 12px;
+    }
+
+    /*   .project-search {
+        width: 40% !important;
+    }*/
+}
+
+@media only screen and ( max-width: 991px) {
+    .modal-dialog {
+        max-width: 100% !important;
+    }
+
+    .job-details-left {
+        border: none;
+    }
+
+    .heroBanner {
+        height: 650px
+    }
+
+    .bannerContent {
+        top: 0
+    }
+
+    .bannerGraphic {
+        max-width: 380px;
+        margin: auto
+    }
+
+    .mainSearchForm {
+        bottom: 350px
+    }
+
+    .bottom-sec .main-heading {
+        margin-bottom: 20px
+    }
+
+    .bottom-sec .text-right {
+        text-align: left !important;
+    }
+
+    .search-wrapper {
+        width: 172px;
+        margin-left: 20px;
+    }
+
+    .dropdown-menu li {
+        margin: 0 !important;
+        padding: 0px 15px;
+    }
+
+    .main-nav ul li {
+        margin-left: 20px;
+    }
+
+
+    /*mobile navigation*/
+    body {
+        padding-top: 67px;
+    }
+
+    .logo {
+        float: none !important;
+        text-align: center
+    }
+
+        .logo a {
+            width: 168px
+        }
+
+    .main-nav {
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: #fff;
+        z-index: 10;
+        overflow: auto;
+        padding: 15px;
+        width: 100%;
+        left: -100%;
+        transition: all 0.2s ease-in-out 0s;
+    }
+
+        .main-nav ul li {
+            display: block;
+            margin: 0 -15px !important;
+        }
+
+            .main-nav ul li a {
+                padding: 10px 15px;
+                border-bottom: 1px solid #ddd;
+                display: block;
+            }
+
+        .main-nav .cta-btn-sm {
+            display: inline-block !important;
+            margin: 15px 0 0 15px
+        }
+
+    .mobNav-header {
+        display: block !important;
+        margin-bottom: 15px
+    }
+
+    .menuIcon {
+        display: block !important;
+        position: absolute;
+        left: 15px;
+        top: 14px;
+        font-size: 27px
+    }
+
+    .mobNav-header .menuIcon {
+        font-size: 24px
+    }
+
+    .main-nav.swap {
+        left: 0;
+        transition: all 0.2s ease-in-out 0s;
+    }
+
+    .menuIcon1 {
+        display: block !important;
+        position: absolute;
+        right: 15px;
+        top: 14px;
+        font-size: 27px
+    }
+
+    .search-wrapper.swap {
+        opacity: 1;
+        visibility: visible;
+        right: 0;
+        transition: all 0.4s ease-in-out 0s;
+    }
+
+    .search-wrapper .flaticon-close {
+        display: block !important;
+    }
+
+    .main-nav ul {
+        float: none !important;
+    }
+
+    .user-menu .dropdown-menu {
+        top: 60px !important;
+        transform: none !important;
+        width: 100%;
+        display: block !important;
+        position: static !important;
+        box-shadow: none;
+    }
+
+    .user-menu .dropdown-toggle {
+        display: none !important;
+    }
+
+    .search-wrapper {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute !important;
+        right: -100%;
+        width: 100%;
+        margin: 0;
+        top: 0;
+        background: #fff;
+        padding: 13px 15px;
+        transition: all 0.4s ease-in-out 0s;
+    }
+
+    .p-80 {
+        padding: 60px 0
+    }
+
+
+    .pro-type {
+        margin-bottom: 15px;
+    }
+
+    .listofjobs-posted-table table td {
+        display: block;
+        width: 100%;
+        padding: 2px 10px;
+    }
+
+        .listofjobs-posted-table table td:last-child {
+            padding-bottom: 20px
+        }
+
+        .listofjobs-posted-table table td:first-child {
+            padding-top: 20px
+        }
+
+    .job-menu {
+        left: -9px;
+        top: 50px;
+    }
+
+        .job-menu:before {
+            right: 118px;
+        }
+
+
+    .details-tabs.myTabsSection .pr-0 {
+        padding-right: 15px !important;
+    }
+
+    .details-tabs.myTabsSection .pl-0 {
+        padding-left: 15px !important;
+    }
+
+    .myTabsSection .tab-content {
+        padding: 15px;
+    }
+
+    .dt-block-ft {
+        margin: 40px -15px -15px -15px;
+        padding: 30px;
+    }
+
+    .borderLine-tabs .tab-content {
+        padding: 30px 0;
+    }
+
+    .main-nav ul li a {
+        position: relative;
+        padding: 10px 15px !important;
+    }
+
+        .main-nav ul li a span {
+            display: block !important;
+            position: relative;
+        }
+
+        .main-nav ul li a i {
+            position: absolute;
+            right: 15px;
+        }
+
+    .my-menu {
+        border-bottom: 1px solid #f1f1f1;
+    }
+
+        .my-menu a {
+            border-bottom: 0px !important;
+            display: block;
+        }
+
+        .my-menu ul li a {
+            border-bottom: 0px !important;
+            font-size: 12px !important;
+        }
+
+
+    .dropdown-toggle {
+        display: none;
+    }
+
+    .menuIcon {
+        display: block !important;
+        position: absolute;
+        left: 15px;
+        top: 14px;
+        font-size: 27px;
+    }
+
+    .main-nav.swap {
+        left: 0;
+        transition: all 0.2s ease-in-out 0s;
+    }
+
+    .main-nav {
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: #fff;
+        z-index: 10;
+        overflow: auto;
+        padding: 15px;
+        width: 100%;
+        left: -100%;
+        transition: all 0.2s ease-in-out 0s;
+    }
+
+        .main-nav ul {
+            float: none !important;
+        }
+
+    .user-menu .dropdown-menu {
+        top: 60px !important;
+        transform: none !important;
+        width: 100%;
+        display: block !important;
+        position: static !important;
+        box-shadow: none;
+    }
+
+    .mobNav-header {
+        display: block !important;
+        margin-bottom: 15px;
+    }
+
+        .mobNav-header .menuIcon {
+            font-size: 24px;
+        }
+
+    .logo {
+        float: none !important;
+        text-align: center;
+    }
+
+    .main-nav ul li {
+        display: block;
+        margin: 0 -15px !important;
+    }
+
+    #li_welcome {
+        padding-bottom: 10px;
+        margin-left: 20px !important;
+    }
+
+    #li_logout {
+        margin-left: 20px !important;
+    }
+
+    .dropdown-menu::before {
+        display: none;
+    }
+
+
+
+    .my-menu .dropdown-menu {
+        position: inherit !important;
+        transform: none !important;
+        border: none;
+        margin-left: 10px;
+        will-change: inherit !important;
+    }
+
+    .caret {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 2px;
+        vertical-align: middle;
+        border-top: 4px dashed;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+        position: absolute !important;
+        right: 20px;
+        top: 20px;
+    }
+
+    .show a .caret {
+        border-bottom: 4px dashed;
+        border-top: none !important;
+    }
+
+    .dropdown-menu .menu-active:after {
+        left: 0px;
+    }
+
+    .tab-content .search-wrapper {
+        opacity: 1;
+        visibility: visible;
+        position: inherit;
+        padding: 0px;
+    }
+
+    #search-f-tab .search-wrapper {
+        width: auto;
+    }
+
+    .search-job-header {
+        margin: 20px 10px;
+    }
+
+    .main-page-nav .cta-btn-sm {
+        padding: 0px 15px !important;
+    }
+
+    div[id*="upProfileAvailability"] .special-radio-btn td {
+        width: 100%;
+        max-width: 96%;
+    }
+
+    div[id*="upParent"] {
+        padding-bottom: 30px;
+    }
+
+    .advance-search-input {
+        width: 80% !important;
+    }
+
+    .main-menu {
+        margin: 0;
+        padding: 0;
+    }
+
+    .leftSideBar {
+        display: none;
+    }
+
+    .jobs-search-tabs {
+        display: block;
+    }
+
+    .search-result-header, .job-search-right-main {
+        display: none;
+    }
+
+    #div_proposals {
+        margin: 0 -15px;
+    }
+
+    .proposal-actions-top {
+        top: 0px;
+        width: 50%;
+    }
+
+    .main-menu ul {
+        width: inherit;
+        padding: 0;
+    }
+
+        .main-menu ul li {
+            width: inherit;
+            display: block !important;
+            height: inherit;
+            padding: 0 15px;
+        }
+
+            .main-menu ul li a {
+                width: inherit;
+                text-align: left;
+            }
+
+                .main-menu ul li a div {
+                    height: inherit;
+                    width: inherit;
+                    text-align: left;
+                }
+
+                    .main-menu ul li a div i {
+                        font-size: 20px;
+                        line-height: 20px;
+                    }
+
+                .main-menu ul li a span {
+                    text-align: left;
+                    overflow: visible;
+                }
+
+    .trabau-mobile-menu {
+        display: block;
+    }
+
+    .trabau_menu i {
+        display: none;
+    }
+
+
+    .interview-actions {
+        right: auto;
+        bottom: 5px;
+        top: auto;
+        width: 100%;
+        margin-left: 0;
+    }
+
+        .interview-actions a {
+            display: inline-block;
+            width: 49%;
+            text-align: center;
+        }
+
+    .interview-result-main {
+        min-height: 330px;
+        padding: 0;
+    }
+
+    .my-proposals .col-sm-3 {
+        padding: 4px 0;
+    }
+
+
+    .small-menu .a-trabau-nav p, .small-menu .menu-title, .small-menu .a-trabau-nav span {
+        display: none !important;
+    }
+
+    .small-menu {
+        width: 60px !important;
+    }
+
+    .side-menu {
+        top: 67px !important;
+    }
+
+    /*   .project-actions {
+        width: 100%;
+        bottom: 5px;
+        top: auto;
+        right: auto;
+        text-align: center;
+        padding: 0px 10px 0px 10px;
+    }
+
+    .btn-project-details {
+        display: block;
+    }
+
+    .project-card .airCardBody {
+        margin-bottom: 20px;
+    }*/
+
+    .project-content-details {
+        margin: 0;
+        margin-top: 15px;
+    }
+
+    .project-result-overview {
+        padding: 15px 0 15px 0;
+    }
+
+    .btn-new-project-small {
+        display: inline-block !important;
+        position: absolute;
+        right: 0;
+        top: -6px;
+    }
+
+    .btn-new-project {
+        display: none !important;
+    }
+
+    /*    .new-project-toolip-info {
+        right: 50px;
+    }*/
+
+    .btn-project-details {
+        margin-top: 15px;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .tabs-holder {
+        display: none !important;
+    }
+
+    .tabs-holder-mobile {
+        display: block !important;
+    }
+
+    /*    .ribbon-menu .content-holder {
+        margin-top: -15px;
+    }*/
+
+    .proposals-result-data .proposal-actions {
+        top: 70px;
+        right: auto;
+        width: 100%;
+        padding: 0px 30px 0px 10px;
+    }
+
+        .proposals-result-data .proposal-actions a {
+            width: 100%;
+            display: block;
+        }
+
+    .proposals-result-data .job-desc {
+        margin-bottom: 60px;
+    }
+
+    /* .project-search {
+        width: 100% !important;
+        float: none !important;
+        margin-top: 10px !important;
+        margin-left: 77px;
+    }*/
+
+    /*  .project-search input[type="text"] {
+            width: 69% !important;
+            margin-bottom: 0;
+        }*/
+}
+
+@media only screen and ( max-width: 767px) {
+    .container, .container-md, .container-sm {
+        max-width: 950px;
+    }
+
+    .bannerContent h2 {
+        font-size: 36px;
+        line-height: 38px
+    }
+
+    .main-heading h2 {
+        font-size: 30px;
+        line-height: 34px;
+    }
+
+    .p-80 {
+        padding: 60px 0
+    }
+
+    .p-60 {
+        padding: 40px 0
+    }
+
+    .discover-content {
+        max-width: 100%
+    }
+
+    .bannerGraphic {
+        max-width: 290px;
+        position: relative;
+    }
+
+    .frmJob-input {
+        width: 295px
+    }
+
+    .mainSearchForm {
+        bottom: 390px
+    }
+
+    .copyrights-row {
+        text-align: center
+    }
+
+        .copyrights-row span {
+            position: static;
+            transform: none
+        }
+
+        .copyrights-row ul {
+            position: static;
+            margin: 20px 0
+        }
+
+        .copyrights-row p {
+            position: static
+        }
+
+    footer {
+        padding: 40px 0
+    }
+
+    .footerLinks ul {
+        margin-bottom: 20px
+    }
+
+    .video-play-button {
+        transform: scale(0.7);
+        transform-origin: -100% -100%;
+    }
+
+    .howItWork-sec .tab-content {
+        padding: 40px;
+    }
+
+    .myCard-body {
+        padding: 10px;
+    }
+
+    .cat-content-thumb {
+        padding: 8px 20px 0px;
+        min-height: 370px;
+    }
+
+    .apply-right {
+        border-left: none;
+        border-top: 1px solid #cecece;
+        margin-top: 10px;
+    }
+
+        .apply-right > :first-child {
+            margin-top: 10px;
+        }
+
+    .advance-search-input {
+        width: 73% !important;
+    }
+
+    .main-menu {
+        margin: 0;
+        padding: 0;
+    }
+
+    .proposal-actions-bottom {
+        display: block;
+        margin-top: 10px;
+        min-height: 40px;
+        text-align: center;
+    }
+
+    .proposal-actions-top {
+        display: none;
+    }
+
+    .proposal-actions-bottom a {
+        width: 32%;
+        text-align: center;
+        padding: 10px 0px !important;
+        font-size: 13px;
+    }
+
+    .proposal-row {
+        padding: 5px 15px;
+    }
+
+        .proposal-row .col-sm-2 {
+            flex: 0 0 20.667%;
+            max-width: 20.667%;
+            padding: 0;
+        }
+
+        .proposal-row .col-sm-10 {
+            flex: 0 0 79.333%;
+            max-width: 79.333%;
+            padding: 0;
+            padding-left: 10px;
+        }
+
+        .proposal-row .profilefoto {
+            height: 70px;
+            width: 70px;
+        }
+
+    .profile-inner-l {
+        width: 100%;
+    }
+
+    .profile-cover-letter {
+        padding: 0;
+    }
+
+
+    .job-result-location {
+        margin-bottom: 30px !important;
+    }
+
+    .job-actions {
+        text-align: center;
+        bottom: 10px;
+        top: unset !important;
+        right: unset !important;
+        width: 100%;
+    }
+
+        .job-actions a {
+            width: 45%;
+            text-align: center;
+            display: inline-block;
+        }
+
+    .other-posted-jobs .job-actions a {
+        width: auto;
+    }
+
+    .job-result-top {
+        width: 100%;
+    }
+
+    .hire-result-main {
+        padding: 10px 0px;
+        margin: 0 -10px;
+    }
+
+    .hire-actions {
+        right: auto;
+        bottom: 5px;
+        top: auto;
+        width: 100%;
+        text-align: center;
+    }
+
+        .hire-actions a {
+            display: inline-block;
+            width: 49% !important;
+            text-align: center;
+        }
+
+
+    .hire-result-main {
+        min-height: 395px;
+    }
+
+    .btn-interview-report {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .interview-actions a {
+        display: inline-block;
+        width: 32%;
+        text-align: center;
+    }
+
+    .interview-actions {
+        margin-left: 0px;
+    }
+}
+
+@media only screen and ( max-width: 575px) {
+    .heroBanner {
+        height: 700px
+    }
+
+    .mainSearchForm {
+        bottom: 280px
+    }
+
+    .frmJob-input {
+        width: 100%
+    }
+
+    .mainSearchForm form span {
+        display: block;
+        text-align: center;
+        margin: 10px 0
+    }
+
+    .mainSearchForm form a {
+        display: block;
+        text-align: center;
+        width: 210px;
+        margin: auto
+    }
+
+    .bannerGraphic {
+        max-width: 270px;
+    }
+
+    .howWork-content .col-6 {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .copyrights-row {
+        margin-top: 40px
+    }
+
+    .cta-btn-md {
+        font-size: 14px;
+        line-height: 47px;
+        height: 47px;
+        padding: 0 22px
+    }
+
+    .bannerContent {
+        text-align: center
+    }
+
+    .off-canvas-container {
+        padding: 0 0 40px
+    }
+
+    .air-card {
+        padding: 40px 30px;
+    }
+
+        .air-card h4 {
+            font-size: 18px;
+        }
+
+    .main-sub-heading h2 {
+        font-size: 24px;
+        line-height: 27px;
+    }
+
+        .main-sub-heading h2 br {
+            display: none
+        }
+
+    .p-80 {
+        padding: 50px 0
+    }
+
+    .slick-arrow {
+        height: 38px;
+        width: 38px;
+    }
+
+    button.slick-prev.slick-arrow {
+        left: -5px;
+    }
+
+    button.slick-next.slick-arrow {
+        right: -5px;
+    }
+
+    .frmJob-select {
+        margin-bottom: 10px;
+    }
+
+    .howItWork-sec .tab-content {
+        padding: 30px;
+    }
+
+        .howItWork-sec .tab-content h3 {
+            font-size: 26px;
+        }
+
+    .steps-point-circle ul li {
+        margin: 0 5px;
+    }
+
+    .card-rd-acc label {
+        display: inline
+    }
+
+    .jobSteps-bg {
+        background-size: 180px;
+        background-position: bottom center
+    }
+
+    .myCard-heading {
+        padding: 20px;
+    }
+
+    .myCard-body {
+        padding: 0px !important;
+    }
+
+    .dt-block .table thead th:first-child {
+        display: none;
+    }
+
+    .dt-block .table tbody td:first-child {
+        display: none;
+    }
+
+    .dt-block .table tbody .td-empty {
+        display: inline-block !important;
+    }
+
+    .dt-block .table thead th, .dt-block .table tbody td {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .main-page-nav li {
+    }
+
+    .about-client {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border: 0;
+        border-top-color: currentcolor;
+        border-top-style: none;
+        border-top-width: 0px;
+        border-top: 1px solid rgba(0,0,0,.1);
+        padding-top: 10px;
+    }
+
+    .advance-search-input {
+        width: 73% !important;
+    }
+
+    .main-menu {
+        margin: 0;
+        padding: 0;
+    }
+
+    .jobs-search-content {
+        padding: 0;
+    }
+
+    .job-result {
+        padding: 20px;
+    }
+
+    .search-result-header {
+        padding: 20px;
+    }
+
+    #divActions {
+        margin-top: 10px;
+    }
+
+        #divActions a:first-child {
+            float: left;
+            width: 45%;
+            text-align: center;
+        }
+
+        #divActions a:last-child {
+            width: 45%;
+            text-align: center;
+        }
+
+    .other-posted-jobs .job-result-top {
+        width: 100%;
+    }
+}
+
+@media only screen and ( max-width: 479px) {
+    .heroBannerNew img {
+        width: auto;
+        height: 142px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .carousel-indicators {
+        margin-bottom: 0
+    }
+
+    .carousel-control-next, .carousel-control-prev {
+        display: none
+    }
+
+    .bannerContent h2 {
+        font-size: 30px;
+        line-height: 32px
+    }
+
+        .bannerContent h2 br {
+            display: none
+        }
+
+    .main-heading h2 {
+        font-size: 28px;
+        line-height: 30px;
+    }
+
+    .p-80 {
+        padding: 40px 0
+    }
+
+    .p-60 {
+        padding: 30px 0
+    }
+
+    .bannerGraphic {
+        max-width: 250px;
+    }
+
+    .sl-bg-img {
+        background-position: 80% 0 !important
+    }
+
+    .air-card h4 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .otherFrmDet p {
+        font-size: 13px;
+    }
+
+    .cs-item {
+        width: 250px !important;
+        padding: 30px 5px;
+    }
+
+    .fs-item {
+        width: 325px !important;
+        padding: 5px !important
+    }
+
+    .profileRating {
+        display: block;
+        padding-left: 0
+    }
+
+    .tags li {
+        font-size: 9px;
+    }
+
+    .howItWork-sec .tab-content {
+        padding: 20px;
+    }
+
+    .search-wrapper .header-search .search-freelancers {
+        width: 64%;
+    }
+
+    .advance-search-input {
+        width: 65% !important;
+    }
+
+    .main-menu {
+        margin: 0;
+        padding: 0;
+    }
+
+    .progress-bar-big .progress-bar-percentage {
+        display: none;
+    }
+}
+
+@media only screen and ( max-width: 375px) {
+    .advance-search-input {
+        width: 63% !important;
+    }
+}

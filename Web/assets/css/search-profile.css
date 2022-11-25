@@ -1,0 +1,108 @@
+﻿.t-search-jobs input[type=text] {
+    min-height: 40px;
+    height: 40px;
+    padding: 10px 20px;
+    border: 1px solid #cecece;
+    border-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    font-size: 13px;
+    line-height: 18px;
+    width: 96%;
+}
+
+    .t-search-jobs input[type=text]:focus {
+        color: #495057;
+        background-color: #fff;
+        border-color: #80bdff;
+        outline: 0;
+        box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+    }
+
+.search-profile-content {
+    padding: 30px;
+    margin: 0 -32px;
+    border: 1px solid #cecece;
+}
+
+.search-bottom-content {
+    display: none;
+}
+
+/*.profiles-search-result {
+    border: 1px solid #cecece;
+}*/
+
+.no-background {
+    background: none !important;
+}
+
+.freelancer-search-result {
+    margin: 0 -16px;
+}
+
+.padd-30 {
+    padding: 30px;
+}
+
+.search-top-content {
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+.profile-row {
+    cursor: default !important;
+}
+
+.filter-header {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.profile-filter-main {
+    padding: 10px 0;
+    border-top: 1px solid #cecece;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+    .profile-filter-main:hover {
+        color: #0bbc56;
+    }
+
+    .profile-filter-main i {
+        position: absolute;
+        right: 15px;
+        color: #0bbc56;
+    }
+
+.search-profile-filters {
+    margin: 3px;
+}
+
+.profile-filter-child {
+    display: none;
+    margin-left: 5px;
+}
+
+    .profile-filter-child a {
+        display: block;
+        cursor: pointer;
+        padding-bottom: 8px;
+        font-weight: 500;
+    }
+
+        .profile-filter-child a:hover {
+            color: #0bbc56 !important;
+        }
+
+        .profile-filter-child a.active {
+            color: #0bbc56 !important;
+        }

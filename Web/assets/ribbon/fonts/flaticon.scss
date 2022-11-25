@@ -1,0 +1,297 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?1f6ce8ad16db9cedeb6d2af9cad595b9") format("truetype"),
+url("./flaticon.woff?1f6ce8ad16db9cedeb6d2af9cad595b9") format("woff"),
+url("./flaticon.woff2?1f6ce8ad16db9cedeb6d2af9cad595b9") format("woff2"),
+url("./flaticon.eot?1f6ce8ad16db9cedeb6d2af9cad595b9#iefix") format("embedded-opentype"),
+url("./flaticon.svg?1f6ce8ad16db9cedeb6d2af9cad595b9#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "paste": "\f101",
+    "copy": "\f102",
+    "scissors": "\f103",
+    "delete": "\f104",
+    "share": "\f105",
+    "redo-arrow": "\f106",
+    "back-arrow": "\f107",
+    "italic": "\f108",
+    "underlined-text": "\f109",
+    "strikethrough": "\f10a",
+    "left-align": "\f10b",
+    "center-align": "\f10c",
+    "right-align": "\f10d",
+    "bucket": "\f10e",
+    "pencil-drawing-a-line": "\f10f",
+    "text-box": "\f110",
+    "cursor": "\f111",
+    "capital-a": "\f112",
+    "diagonal-line": "\f113",
+    "rectangular-shape-outline": "\f114",
+    "ellipse-outline-shape-variant": "\f115",
+    "curved-line": "\f116",
+    "business-ascendant-graphic-line": "\f117",
+    "line": "\f118",
+    "right-arrow": "\f119",
+    "double-arrow": "\f11a",
+    "double-arrows": "\f11b",
+    "bold": "\f11c",
+    "click": "\f11d",
+    "windows-couple": "\f11e",
+    "loupe": "\f11f",
+    "open": "\f120",
+    "relation": "\f121",
+    "compare": "\f122",
+    "is-not-equal-to-mathematical-symbol": "\f123",
+    "puzzle": "\f124",
+    "select": "\f125",
+    "left-arrow": "\f126",
+    "right-arrow-1": "\f127",
+    "down-arrow": "\f128",
+    "up-arrow": "\f129",
+    "align-left": "\f12a",
+    "left-alignment": "\f12b",
+    "sort": "\f12c",
+    "top-alignment": "\f12d",
+    "align-center": "\f12e",
+    "width": "\f12f",
+    "height": "\f130",
+    "size-square": "\f131",
+    "scale": "\f132",
+    "axis": "\f133",
+    "website": "\f134",
+    "align": "\f135",
+    "group": "\f136",
+    "tile": "\f137",
+    "user": "\f138",
+    "group-1": "\f139",
+    "cancel": "\f13a",
+    "exclamation": "\f13b",
+    "tools": "\f13c",
+    "view": "\f13d",
+    "letter-r": "\f13e",
+    "letter-a": "\f13f",
+    "letter-f": "\f140",
+    "website-1": "\f141",
+    "home-icon-silhouette": "\f142",
+    "paper": "\f143",
+    "grid": "\f144",
+);
+
+.flaticon-paste:before {
+    content: map-get($flaticon-map, "paste");
+}
+.flaticon-copy:before {
+    content: map-get($flaticon-map, "copy");
+}
+.flaticon-scissors:before {
+    content: map-get($flaticon-map, "scissors");
+}
+.flaticon-delete:before {
+    content: map-get($flaticon-map, "delete");
+}
+.flaticon-share:before {
+    content: map-get($flaticon-map, "share");
+}
+.flaticon-redo-arrow:before {
+    content: map-get($flaticon-map, "redo-arrow");
+}
+.flaticon-back-arrow:before {
+    content: map-get($flaticon-map, "back-arrow");
+}
+.flaticon-italic:before {
+    content: map-get($flaticon-map, "italic");
+}
+.flaticon-underlined-text:before {
+    content: map-get($flaticon-map, "underlined-text");
+}
+.flaticon-strikethrough:before {
+    content: map-get($flaticon-map, "strikethrough");
+}
+.flaticon-left-align:before {
+    content: map-get($flaticon-map, "left-align");
+}
+.flaticon-center-align:before {
+    content: map-get($flaticon-map, "center-align");
+}
+.flaticon-right-align:before {
+    content: map-get($flaticon-map, "right-align");
+}
+.flaticon-bucket:before {
+    content: map-get($flaticon-map, "bucket");
+}
+.flaticon-pencil-drawing-a-line:before {
+    content: map-get($flaticon-map, "pencil-drawing-a-line");
+}
+.flaticon-text-box:before {
+    content: map-get($flaticon-map, "text-box");
+}
+.flaticon-cursor:before {
+    content: map-get($flaticon-map, "cursor");
+}
+.flaticon-capital-a:before {
+    content: map-get($flaticon-map, "capital-a");
+}
+.flaticon-diagonal-line:before {
+    content: map-get($flaticon-map, "diagonal-line");
+}
+.flaticon-rectangular-shape-outline:before {
+    content: map-get($flaticon-map, "rectangular-shape-outline");
+}
+.flaticon-ellipse-outline-shape-variant:before {
+    content: map-get($flaticon-map, "ellipse-outline-shape-variant");
+}
+.flaticon-curved-line:before {
+    content: map-get($flaticon-map, "curved-line");
+}
+.flaticon-business-ascendant-graphic-line:before {
+    content: map-get($flaticon-map, "business-ascendant-graphic-line");
+}
+.flaticon-line:before {
+    content: map-get($flaticon-map, "line");
+}
+.flaticon-right-arrow:before {
+    content: map-get($flaticon-map, "right-arrow");
+}
+.flaticon-double-arrow:before {
+    content: map-get($flaticon-map, "double-arrow");
+}
+.flaticon-double-arrows:before {
+    content: map-get($flaticon-map, "double-arrows");
+}
+.flaticon-bold:before {
+    content: map-get($flaticon-map, "bold");
+}
+.flaticon-click:before {
+    content: map-get($flaticon-map, "click");
+}
+.flaticon-windows-couple:before {
+    content: map-get($flaticon-map, "windows-couple");
+}
+.flaticon-loupe:before {
+    content: map-get($flaticon-map, "loupe");
+}
+.flaticon-open:before {
+    content: map-get($flaticon-map, "open");
+}
+.flaticon-relation:before {
+    content: map-get($flaticon-map, "relation");
+}
+.flaticon-compare:before {
+    content: map-get($flaticon-map, "compare");
+}
+.flaticon-is-not-equal-to-mathematical-symbol:before {
+    content: map-get($flaticon-map, "is-not-equal-to-mathematical-symbol");
+}
+.flaticon-puzzle:before {
+    content: map-get($flaticon-map, "puzzle");
+}
+.flaticon-select:before {
+    content: map-get($flaticon-map, "select");
+}
+.flaticon-left-arrow:before {
+    content: map-get($flaticon-map, "left-arrow");
+}
+.flaticon-right-arrow-1:before {
+    content: map-get($flaticon-map, "right-arrow-1");
+}
+.flaticon-down-arrow:before {
+    content: map-get($flaticon-map, "down-arrow");
+}
+.flaticon-up-arrow:before {
+    content: map-get($flaticon-map, "up-arrow");
+}
+.flaticon-align-left:before {
+    content: map-get($flaticon-map, "align-left");
+}
+.flaticon-left-alignment:before {
+    content: map-get($flaticon-map, "left-alignment");
+}
+.flaticon-sort:before {
+    content: map-get($flaticon-map, "sort");
+}
+.flaticon-top-alignment:before {
+    content: map-get($flaticon-map, "top-alignment");
+}
+.flaticon-align-center:before {
+    content: map-get($flaticon-map, "align-center");
+}
+.flaticon-width:before {
+    content: map-get($flaticon-map, "width");
+}
+.flaticon-height:before {
+    content: map-get($flaticon-map, "height");
+}
+.flaticon-size-square:before {
+    content: map-get($flaticon-map, "size-square");
+}
+.flaticon-scale:before {
+    content: map-get($flaticon-map, "scale");
+}
+.flaticon-axis:before {
+    content: map-get($flaticon-map, "axis");
+}
+.flaticon-website:before {
+    content: map-get($flaticon-map, "website");
+}
+.flaticon-align:before {
+    content: map-get($flaticon-map, "align");
+}
+.flaticon-group:before {
+    content: map-get($flaticon-map, "group");
+}
+.flaticon-tile:before {
+    content: map-get($flaticon-map, "tile");
+}
+.flaticon-user:before {
+    content: map-get($flaticon-map, "user");
+}
+.flaticon-group-1:before {
+    content: map-get($flaticon-map, "group-1");
+}
+.flaticon-cancel:before {
+    content: map-get($flaticon-map, "cancel");
+}
+.flaticon-exclamation:before {
+    content: map-get($flaticon-map, "exclamation");
+}
+.flaticon-tools:before {
+    content: map-get($flaticon-map, "tools");
+}
+.flaticon-view:before {
+    content: map-get($flaticon-map, "view");
+}
+.flaticon-letter-r:before {
+    content: map-get($flaticon-map, "letter-r");
+}
+.flaticon-letter-a:before {
+    content: map-get($flaticon-map, "letter-a");
+}
+.flaticon-letter-f:before {
+    content: map-get($flaticon-map, "letter-f");
+}
+.flaticon-website-1:before {
+    content: map-get($flaticon-map, "website-1");
+}
+.flaticon-home-icon-silhouette:before {
+    content: map-get($flaticon-map, "home-icon-silhouette");
+}
+.flaticon-paper:before {
+    content: map-get($flaticon-map, "paper");
+}
+.flaticon-grid:before {
+    content: map-get($flaticon-map, "grid");
+}
