@@ -1,0 +1,225 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using TrabauClassLibrary.BLL;
+using TrabauClassLibrary.BLL.SignUp;
+using TrabauClassLibrary.DLL.SignUp;
+
+public partial class Signup_index : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+        if (!IsPostBack)
+        {
+            if (CheckProtection())
+            {
+                div_signup.Visible = true;
+            }
+            else
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Open_Protection_Popup", "setTimeout(function () {HandlePopUp('1','divTrabau_Protection');}, 150);", true);
+            }
+
+            Session.Clear();
+            Session.Abandon();
+
+            ViewState["Trabau_SignUp_EmailId_Validation"] = "1";
+            div_signup_step1.Visible = true;
+            div_signup_step2.Visible = false;
+        }
+    }
+
+    public bool CheckProtection()
+    {
+        bool val = false;
+        try
+        {
+            if (Session["Trabau_Protection"] != null)
+            {
+                if (Session["Trabau_Protection"].ToString() == "ok")
+                {
+                    val = true;
+                }
+            }
+        }
+        catch (Exception)
+        {
+
+        }
+        return val;
+    }
+
+    protected void btnSignUp_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            if (ViewState["Trabau_SignUp_EmailId_Validation"] == null)
+            {
+                ViewState["Trabau_SignUp_EmailId_Validation"] = "1";
+            }
+            string Step_No = ViewState["Trabau_SignUp_EmailId_Validation"].ToString();
+
+            if (Step_No == "1")
+            {
+                Process_Step1();
+            }
+            else if (Step_No == "2")
+            {
+                hfRemarks.Value = "Step 0";
+                Process_Step2();
+            }
+
+
+        }
+        catch (Exception)
+        {
+
+        }
+    }
+
+    public void Process_Step1()
+    {
+        try
+        {
+            string FirstName = txtFirstName.Text;
+            string LastName = txtLastName.Text;
+            string EmailId = txtEmailId.Text;
+            BLL_Registration obj = new BLL_Registration();
+            Tuple<List<dynamic>, string> data = obj.CheckEmailId(EmailId, 120);
+            if (data != null)
+            {
+                if (data.Item2 == "ok")
+                {
+                    if (data.Item1 != null)
+                    {
+                        List<dynamic> res = data.Item1;
+                        if (res[0].Status == "success")
+                        {
+                            ViewState["Trabau_SignUp_EmailId_Validation"] = "2";
+                            ViewState["Trabau_SignUp_FirstName"] = txtFirstName.Text;
+                            ViewState["Trabau_SignUp_LastName"] = txtLastName.Text;
+                            ViewState["Trabau_SignUp_EmailId"] = EmailId;
+
+                            div_signup_step1.Visible = false;
+                            div_signup_step2.Visible = true;
+                            div_step2_header.InnerHtml = res[0].Message;
+
+                            BindCountries();
+                            div_response.InnerHtml = string.Empty;
+                        }
+                        else
+                        {
+                            div_response.InnerHtml = res[0].Message;
+                        }
+                    }
+                }
+            }
+        }
+        catch (Exception)
+        {
+        }
+    }
+
+    public void Process_Step2()
+    {
+        try
+        {
+            //   hfRemarks.Value = "Step 1";
+            string Password = txtPassword.Text;
+            string Country = ddlCountry.SelectedValue;
+            string RegType = ddlRegistrationType.SelectedValue;
+            string FirstName = ViewState["Trabau_SignUp_FirstName"].ToString();
+            string LastName = ViewState["Trabau_SignUp_LastName"].ToString();
+            string EmailId = ViewState["Trabau_SignUp_EmailId"].ToString();
+            string IPAddress = Request.UserHostAddress;
+            string UserId = txtUserId.Text;
+
+            BLL_Registration obj = new BLL_Registration();
+            Tuple<List<dynamic>, string> data = obj.User_Pre_SignUp(FirstName, LastName, EmailId, UserId, Password, Int32.Parse(Country), RegType, IPAddress);
+
+            if (data != null)
+            {
+                if (data.Item2 == "ok")
+                {
+                    if (data.Item1 != null)
+                    {
+                        List<dynamic> res = data.Item1;
+                        if (res[0].Status == "success")
+                        {
+                            Session["Trabau_UserId"] = res[0].UserId;
+                            Session["Trabau_UserName"] = UserId;
+                            Session["Trabau_FirstName"] = FirstName;
+                            Session["Trabau_LastName"] = LastName;
+                            Session["Trabau_EmailId"] = res[0].EmailId;
+                            Session["Trabau_UserType"] = RegType;
+
+
+                            try
+                            {
+                                Emailer obj_email = new Emailer();
+                                string body = "Dear " + FirstName + ",<br/><br/>Thanks for signup in Trabau. Below are the credentials<br/><br/>";
+                                body = body + "User Id: " + UserId + "<br/>";
+                                body = body + "Password: " + Password;
+                                obj_email.SendEmail(EmailId, "", "", "Trabau Registration", "Thank you signup in Trabau", body, null);
+
+
+                            }
+                            catch (Exception)
+                            {
+
+                            }
+                            string redirect_url = "";
+                            if(RegType=="W")
+                            {
+                                redirect_url = "profile-updation.aspx";
+                            }
+                            else
+                            {
+                                redirect_url = "company-details.aspx";
+                            }
+
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "SignUp__Redirect", "setTimeout(function () {window.location.href='"+ redirect_url + "';}, 5000); ", true);
+                        }
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "SignUp_Message", "Swal.fire({type: '" + res[0].Status + "',  title: '" + res[0].Message + "',  showConfirmButton: true,  timer: 3000});", true);
+                    }
+                }
+            }
+        }
+        catch (Exception)
+        {
+
+        }
+    }
+
+    public void BindCountries()
+    {
+        try
+        {
+            DLL_Registration obj = new DLL_Registration();
+            DataSet ds_country = obj.GetCountryList();
+
+            ddlCountry.DataSource = ds_country;
+            ddlCountry.DataTextField = "Text";
+            ddlCountry.DataValueField = "Value";
+            ddlCountry.DataBind();
+        }
+        catch (Exception ex)
+        {
+        }
+    }
+
+    protected void btnValidateProtection_Click(object sender, EventArgs e)
+    {
+        if (txtProtection_Password.Text == "admin_123@")
+        {
+            Session["Trabau_Protection"] = "ok";
+            div_signup.Visible = true;
+
+        }
+    }
+}
