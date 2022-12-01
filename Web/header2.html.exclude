@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+
+		
+		<style>
+			html {
+			  position: relative;
+			  min-height: 100%;
+			}
+			body {
+			  margin-bottom: 100px;
+			}
+		</style>
+		
+    </head>
+	
+    <body>
+        <header>
+			<div class="container clearfix">
+				<div class="menuIcon" id="toggle" style="display: none">
+					<i class="flaticon-menu"></i>
+				</div>
+				<div class="logo float-left">
+					<a href="#"><img src="assets/uploads/logo.png" alt="logo"></a>
+				</div>
+				<div class="main-nav float-right">
+					<div class="mobNav-header" style="display: none">
+						<div class="menuIcon" id="closeToggle">
+							<i class="flaticon-close"></i>
+						</div>
+						<div class="logo">
+							<a href="#"><img src="assets/uploads/logo.png" alt="logo"></a>
+						</div>
+					</div>
+					<ul class="float-right">
+						<li><a href="#">How it Works?</a></li>
+						<li class="dropdown">
+							<div class="user-menu">
+								<a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<img src="assets/uploads/avtar.jpg" alt="user pic" class="user-avtar">
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#">
+									
+										<div class="d-flex">
+											<img src="assets/uploads/avtar.jpg" alt="user pic" class="user-avtar">
+											<div class="d-flex align-items-center">
+												<div class="flex-1">
+													<div class="ellipsis">Parvinder Kumar</div> 
+													<div class="org-type ellipsis">Freelancer</div>
+												</div>
+											</div>
+										</div>
+										
+									</a>
+									<a class="dropdown-item" href="#">Settings</a>
+									<a class="dropdown-item" href="#">Log Out</a>
+								</div>
+							</div>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+		</header>
+		
+		
+		<div class="layout-page-content">
+			<div class="container">
+				<!-- put content here -->
+				
+			</div>
+		</div>
+		
+		
+		
+		
+		<footer class="fix-footer text-center">
+			<div class="container">
+				<ul>
+					<li><a href="#">Terms of Service</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Accessibility</a></li>
+				</ul>
+				<p>© All Rights Reserved 2020 | Trabau</p>
+			</div>
+		</footer>
+		
+		
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="assets/js/bootstrap.min.js"></script>
+		
+		<!-- custom js -->
+		<script src="assets/js/main.js"></script>
+		
+    </body>
+</html>
