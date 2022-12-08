@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+		<style>
+			html {
+			  position: relative;
+			  min-height: 100%;
+			}
+			body {
+			  margin-bottom: 100px;
+			  background: #f1f1f1;
+			}
+		</style>
+    </head>
+    <body style="background-image: url('assets/uploads/login-bg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; background-color: #0bbc56;">
+		<div class="off-canvas-container">
+			<main class="container">
+				<div class="air-card">
+					<div class="logo">
+						<a href="#"><img src="assets/uploads/logo.png" alt="logo"></a>
+					</div>
+					<h4>Log in</h4>
+					<form>
+						<input type="text" placeholder="User Name or Email" class="form-control">
+						<input type="submit" value="Continue" class="form-control">
+						<div class="otherFrmDet">
+							<span>Or</span>
+							<p>Dont have an Account? <a href="#">Sign Up</a></p>
+						</div>
+					</form>
+				</div>
+			</main>
+		</div>
+		
+		<footer class="fix-footer text-center">
+			<div class="container">
+				<ul>
+					<li><a href="#">Terms of Service</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Accessibility</a></li>
+				</ul>
+				<p>© All Rights Reserved 2020 | Trabau</p>
+			</div>
+		</footer>
+		
+    </body>
+</html>

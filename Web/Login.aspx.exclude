@@ -1,0 +1,44 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/main.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div class="container">
+        <div class="SignUp">
+            <asp:UpdatePanel ID="upSignUp_Step1" runat="server">
+                <ContentTemplate>
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <h2>Login</h2>
+                        </div>
+                        <div class="col-sm-12">
+                            <asp:Login ID="UserAuthLogin" runat="server" OnAuthenticate="UserAuthLogin_Authenticate" FailureText="<div style='color:red'>Invalid UserName or Password</div>" Width="100%">
+                                <LayoutTemplate>
+                                    <div class="form-group">
+                                        <label>User Id</label>
+                                        <asp:TextBox ID="UserName" runat="server" CssClass="form-control" placeholder="Enter UserId" autocomplete="Off"></asp:TextBox>
+                                        <asp:RequiredFieldValidator runat="server" CssClass="text-danger" ControlToValidate="UserName" SetFocusOnError="true"
+                                            ErrorMessage="Enter UserId" ValidationGroup="Trabau_Login" Display="Dynamic" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Password</label>
+                                        <asp:TextBox ID="Password" runat="server" CssClass="form-control" placeholder="Enter Password" TextMode="Password" autocomplete="Off"></asp:TextBox>
+                                        <asp:RequiredFieldValidator runat="server" CssClass="text-danger" ControlToValidate="Password" SetFocusOnError="true"
+                                            ErrorMessage="Enter Password" ValidationGroup="Trabau_Login" Display="Dynamic" />
+                                    </div>
+                                    <div class="form-group">
+                                        <asp:Literal ID="FailureText" runat="server" EnableViewState="False"></asp:Literal>
+                                    </div>
+                                    <div class="form-group">
+                                        <asp:Button ID="btnLogin" runat="server" Text="Login" ValidationGroup="Trabau_Login" CommandName="Login" />
+                                    </div>
+                                </LayoutTemplate>
+                            </asp:Login>
+                        </div>
+                    </div>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </div>
+    </div>
+</asp:Content>
+

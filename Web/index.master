@@ -1,0 +1,300 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="index.master.cs" Inherits="index_master" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/flaticon.css?version=1.0" />
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/css/jquery.dropdown.min.css" />
+    <link rel="stylesheet" href="assets/css/style-1.1.css?version=1.7" />
+    <link rel="stylesheet" href="assets/css/responsive-1.1.css?version=1.1" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script src='<%= Page.ResolveUrl("~/assets/js/jquery-3.4.1.min.js") %>'></script>
+    <script src='<%= Page.ResolveUrl("~/assets/js/jquery.dropdown.js") %>'></script>
+    <style>
+        @media only screen and (max-width:1200px) {
+            .container {
+                max-width: 1100px
+            }
+
+            .main-nav {
+                width: auto;
+            }
+
+                .main-nav li a {
+                    padding: 0 10px !important;
+                }
+
+                .main-nav ul li {
+                    margin-left: 5px;
+                }
+        }
+
+        @media only screen and (max-width:1015px) {
+            .search-wrapper {
+                width: 200px;
+            }
+        }
+
+        @media only screen and (max-width:991px) {
+            .main-nav {
+                width: inherit;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <link href='<%= Page.ResolveUrl("~/assets/plugins/toastr/css/toastr.min.css") %>' rel="stylesheet" type="text/css" />
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div id="div_home" runat="server" visible="false">
+            <header>
+                <div class="container clearfix">
+                    <div class="menuIcon" id="toggle" style="display: none">
+                        <i class="flaticon-menu"></i>
+                    </div>
+                    <div class="logo float-left">
+                        <a href="../../index.aspx">
+                            <img src="<%= Page.ResolveUrl("~/assets/uploads/logo.png") %>" alt="logo" /></a>
+                    </div>
+                    <div class="menuIcon1" id="search-nav" style="display: none">
+                        <i class="flaticon-search"></i>
+                    </div>
+                    <div class="search-wrapper float-left">
+                        <div class="header-search">
+                            <div class="search-dd">
+                                <button type="button" class="search-dd-icon"><i class="flaticon-search"></i></button>
+                                <button type="button" class="angle-dd-icon change-search-type" data-jq-dropdown="#jq-dropdown-1"><i class="flaticon-down-chevron"></i></button>
+                            </div>
+                            <input type="text" class="form-control" id="txtHeader_Search" autocomplete="new-password" />
+                            <button type="button" class="search_close"><i class="flaticon-close" style="display: none"></i></button>
+
+                            <div id="jq-dropdown-1" class="jq-dropdown dd-dropdown-search">
+                                <ul class="jq-dropdown-menu search-drp">
+                                    <li><a onclick="ChangeDropDown(this)" search-type="FL">Freelancers, Contractors, & Agencies</a></li>
+                                    <li><a onclick="ChangeDropDown(this)" search-type="JOBS" class="search-selected">Jobs</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="div_search">
+                        </div>
+                        <div class="body-overlay"></div>
+                    </div>
+                    <div class="main-nav float-right">
+                        <div class="mobNav-header" style="display: none">
+                            <div class="menuIcon" id="closeToggle">
+                                <i class="flaticon-close"></i>
+                            </div>
+                            <div class="logo">
+                                <a href="../index.aspx">
+                                    <img src="<%= Page.ResolveUrl("~/assets/uploads/logo.png") %>" alt="logo" /></a>
+                            </div>
+                        </div>
+                        <ul class="float-right main-page-nav trabau-menu">
+                            <li id="li_createproject" runat="server"><a href="#" class="cta-btn-sm">Create Project</a></li>
+                            <li><a href="<%= Page.ResolveUrl("~/how-it-works.aspx") %>">How it Works?</a></li>
+                            <li id="li_login" runat="server"><a href='<%= Page.ResolveUrl("~/login.aspx") %>'>Log In</a></li>
+                            <li id="li_signup" runat="server"><a href='<%= Page.ResolveUrl("~/signup/index.aspx") %>' class="cta-btn-sm">Sign Up</a></li>
+                            <li id="li_postjob" runat="server"><a href='<%= Page.ResolveUrl("~/Jobs/Posting/postjob.aspx") %>' class="cta-btn-sm">Post a Job</a></li>
+                            <li class="dropdown" id="li_menu" runat="server" visible="false">
+                                <div class="user-menu">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img id="img_profile_pic_main" runat="server" alt="user pic" class="user-avtar" />
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <asp:Repeater ID="rAccounts" runat="server">
+                                            <ItemTemplate>
+                                                <asp:LinkButton class="dropdown-item" runat="server" ID="lbtnSwitchAccount" OnClick="lbtnSwitchAccount_Click">
+                                                    <div class="d-flex">
+                                                        <img id="img_profile_pic" runat="server" alt="user pic" class="user-avtar" />
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-1">
+                                                                <div class="ellipsis">
+                                                                    <%#Eval("FirstName") %>
+                                                                    <asp:Label ID="lblUserId" runat="server" Visible="false" Text='<%#Eval("UserId") %>'></asp:Label>
+                                                                    <asp:Label ID="lblUserType" runat="server" Visible="false" Text='<%#Eval("UserType") %>'></asp:Label>
+                                                                    <asp:Label ID="lblFirstName" runat="server" Visible="false" Text='<%#Eval("FirstName") %>'></asp:Label>
+                                                                    <asp:Label ID="lblFullName" runat="server" Visible="false" Text='<%#Eval("FullName") %>'></asp:Label>
+                                                                </div>
+                                                                <div class="org-type ellipsis" id="divUserType" runat="server"><%#Eval("UserTypeView") %></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </asp:LinkButton>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                        <a class="dropdown-item" href='<%= Page.ResolveUrl("~/profile/settings/") %>'><i class="fa fa-cog" aria-hidden="true"></i>Settings</a>
+                                        <a class="dropdown-item" href='<%= Page.ResolveUrl("~/login.aspx") %>'><i class="fa fa-sign-out" aria-hidden="true"></i>Log Out</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <footer>
+                <div class="footerLinks">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 col-6">
+                                <h4>About</h4>
+                                <ul>
+                                    <li><a href="#">Careers</a></li>
+                                    <li><a href="#">Press & News</a></li>
+                                    <li><a href="#">Partnerships</a></li>
+                                    <li><a href="../policy/privacy.aspx">Privacy Policy</a></li>
+                                    <li><a href="#">Terms of Service</a></li>
+                                    <li><a href="#">Intellectual Property Claims</a></li>
+                                    <li><a href="#">Investor Relations</a></li>
+                                    <li><a href="#">Announcement</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <h4>Support</h4>
+                                <ul>
+                                    <li><a href="#">Help & Support</a></li>
+                                    <li><a href="#">Posting Jobs</a></li>
+                                    <li><a href="#">Become a Freelancer</a></li>
+                                    <li><a href="#">User Training</a></li>
+                                    <li><a href="#">Trust & Safety</a></li>
+                                    <li><a href="#">Documentations</a></li>
+                                    <li><a href="#">Modeling software</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <h4>Community</h4>
+                                <ul>
+                                    <li><a href="#">Events</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Forum</a></li>
+                                    <li><a href="#">Podcast</a></li>
+                                    <li><a href="#">Invite a Friend</a></li>
+                                    <li><a href="#">Become a freelancer</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <h4>Other Links</h4>
+                                <ul>
+                                    <li><a href="#">Help & Support</a></li>
+                                    <li><a href="#">Trust & Safety</a></li>
+                                    <li><a href="#">The Speak Logic Project</a></li>
+                                    <li><a href="#">SLPSoft</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyrights-row">
+                    <div class="container">
+                        <span><a href="#">
+                            <img src="<%= Page.ResolveUrl("~/assets/uploads/logo-white.png") %>" alt="logo" /></a></span>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                        </ul>
+                        <p>&copy; All Rights Reserved 2020 | Trabau</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <div id="divTrabau_Protection" class="modal fade" role="dialog">
+
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+
+                    <!-- Modal body -->
+
+                    <div class="modal-body" id="div_protection_content">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="txtProtection_Password">Enter Password</label>
+                                    <asp:TextBox ID="txtProtection_Password" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                                    <asp:RequiredFieldValidator runat="server" CssClass="text-danger" ControlToValidate="txtProtection_Password" SetFocusOnError="true" ErrorMessage="Enter Password" ValidationGroup="Protection" Display="Dynamic" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <asp:Button ID="btnValidateProtection" runat="server" Text="Submit" OnClick="btnValidateProtection_Click" ValidationGroup="Protection" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <asp:UpdateProgress ID="UpdateProgress1" runat="server" DisplayAfter="0" style="z-index: 9999">
+            <ProgressTemplate>
+                <div id="loader-wrapper">
+                    <div id="loader">
+                        <img src='<%= Page.ResolveUrl("~/assets/images/loading.svg") %>'>
+                        <p>Loading...</p>
+                    </div>
+                </div>
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+        <cc1:AlwaysVisibleControlExtender ID="AlwaysVisibleControlExtender5" runat="server"
+            HorizontalSide="Center" TargetControlID="UpdateProgress1" VerticalSide="Middle"></cc1:AlwaysVisibleControlExtender>
+    </form>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <script src='<%= Page.ResolveUrl("~/assets/js/bootstrap.min.js") %>'></script>
+    <script src='<%= Page.ResolveUrl("~/assets/js/main.js?version=1.1") %>'></script>
+    <!-- flickity slider JavaScript -->
+    <script src='<%= Page.ResolveUrl("~/assets/js/slick.js") %>'></script>
+    <script src='<%= Page.ResolveUrl("~/assets/plugins/toastr/js/toastr.js") %>'></script>
+    <script src='<%= Page.ResolveUrl("~/assets/plugins/cookie/jquery.cookie.js") %>'></script>
+    <script>
+        var pathconfig_hire = '<%= Page.ResolveUrl("~/hire.aspx") %>';
+    </script>
+    <script src='<%= Page.ResolveUrl("~/assets/js/trabau-picture.js?version=1.1") %>'></script>
+    <script src='<%= Page.ResolveUrl("~/assets/js/trabau-search.js?version=1.2") %>'></script>
+
+    <script>
+
+        function TrendingFreelancersSlick() {
+            $('.variable-width-2').slick({
+                dots: false,
+                infinite: false,
+                speed: 300,
+                slidesToShow: 1,
+                variableWidth: true
+            });
+        }
+
+        function CategoriesSlick() {
+            $('.category-content').slick({
+                dots: false,
+                infinite: false,
+                speed: 300,
+                slidesToShow: 1,
+                variableWidth: true
+            });
+        }
+
+
+        </script>
+</body>
+</html>

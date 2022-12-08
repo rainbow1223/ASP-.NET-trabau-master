@@ -1,0 +1,392 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="project.master.cs" Inherits="project" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script src='<%= Page.ResolveUrl("~/assets/js/jquery-3.4.1.min.js") %>'></script>
+    <%--  <script src='<%= Page.ResolveUrl("~/assets/js/jquery.dropdown.js") %>'></script>--%>
+</head>
+<body>
+    <%--<link href='<%= Page.ResolveUrl("~/assets/css/jquery.dropdown.min.css") %>' rel="stylesheet" type="text/css" />--%>
+    <link href='<%= Page.ResolveUrl("~/assets/css/bootstrap.min.css") %>' rel="stylesheet" type="text/css" />
+    <link href='<%= Page.ResolveUrl("~/assets/css/flaticon.css?version=3.5") %>' rel="stylesheet" type="text/css" />
+    <link href='<%= Page.ResolveUrl("~/assets/css/font-awesome.min.css") %>' rel="stylesheet" type="text/css" />
+    <link href='<%= Page.ResolveUrl("~/assets/css/style-1.1.css?version=4.2.9") %>' rel="stylesheet" type="text/css" />
+    <link href='<%= Page.ResolveUrl("~/assets/css/responsive-1.1.css?version=3.7") %>' rel="stylesheet" type="text/css" />
+    <%--    <link href='<%= Page.ResolveUrl("~/assets/plugins/sweet-alert2/sweetalert2.min.css") %>' rel="stylesheet" type="text/css" />--%>
+    <link href='<%= Page.ResolveUrl("~/assets/plugins/toastr/css/toastr.min.css") %>' rel="stylesheet" type="text/css" />
+    <link href='<%= Page.ResolveUrl("~/assets/plugins/select2/css/select2.min.css") %>' rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha256-rByPlHULObEjJ6XQxW/flG2r+22R5dKiAoef+aXWfik=" crossorigin="anonymous" />
+
+    <link href='<%= Page.ResolveUrl("~/assets/css/view-project.css?version=4.0.5") %>' rel="stylesheet" type="text/css" />
+    <link href='<%= Page.ResolveUrl("~/assets/ribbon/fonts/flaticon.css?version=1.1") %>' rel="stylesheet" type="text/css" />
+    <link href='<%= Page.ResolveUrl("~/assets/ribbon/Ej1/Css/ej.web.all.min.css") %>' rel="stylesheet" type="text/css" />
+
+
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" ScriptMode="Release"></asp:ScriptManager>
+        <header>
+            <div class="container-fluid clearfix">
+                <div class="menuIcon" id="toggle" style="display: none">
+                    <i class="flaticon-menu"></i>
+                </div>
+                <div class="logo float-left">
+                    <a id="a_logo" runat="server">
+                        <img src="<%= Page.ResolveUrl("~/assets/uploads/logo-small.png") %>" alt="logo" /></a>
+                </div>
+                <div class="project-title-wrapper float-left" id="project_title" runat="server">
+                </div>
+
+                <div class="main-nav float-right">
+                    <div class="mobNav-header" style="display: none">
+                        <div class="menuIcon" id="closeToggle">
+                            <i class="flaticon-close"></i>
+                        </div>
+                        <div class="logo">
+                            <a href="#">
+                                <img src='<%= Page.ResolveUrl("~/assets/uploads/logo.png") %>' alt="logo" /></a>
+                        </div>
+                    </div>
+                    <ul class="main-menu">
+                        <li id="li_menu_findwork" runat="server" visible="false" class="my-menu">
+                            <a id="findwork_dropdownMenuButton" runat="server" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="trabau_menu"><i class="flaticon-menu-1"></i></div>
+                                <div class="trabau-mobile-menu">MAIN MENU</div>
+                                <span class="caret mobile-caret"></span></a>
+                            <ul class="dropdown-menu" aria-labelledby="findwork_dropdownMenuButton">
+                                <li>
+                                    <a id="lifind_work" runat="server" href='~/jobs/searchjobs/index.aspx'>
+                                        <div>
+                                            <i class="flaticon-search-1"></i>
+                                            <%--  <img src="https://www.trabau.com/assets/images/find-work.svg" />--%>
+                                        </div>
+                                        <span>Find Work</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a id="li_advance_search" runat="server" href='~/jobs/searchjobs/search.aspx'>
+                                        <div>
+                                            <i class="flaticon-statistics"></i>
+                                            <%--<img src="https://www.trabau.com/assets/images/advance-search.svg" />--%>
+                                        </div>
+                                        <span>Advance Search</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a id="lisaved_jobs" runat="server" href='~/jobs/searchjobs/search.aspx?location=savedjobs'>
+                                        <div>
+                                            <i class="flaticon-leader"></i>
+                                            <%--<img src="https://www.trabau.com/assets/images/saved-jobs.svg" />--%>
+                                        </div>
+                                        <span>Saved Jobs</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" runat="server" href='~/jobs/myjobs.aspx'>
+                                        <div><i class="flaticon-team"></i></div>
+                                        <span>My Jobs</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a id="li_proposals" runat="server" href='~/jobs/proposals/index.aspx'>
+                                        <div>
+                                            <i class="flaticon-notebook"></i>
+                                            <%--<img src="https://www.trabau.com/assets/images/proposals.svg" />--%>
+                                        </div>
+                                        <span>Proposals</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a id="liprofile" runat="server" href='~/profile/user/profile.aspx'>
+                                        <div>
+                                            <i class="flaticon-user"></i>
+                                            <%--<img src="https://www.trabau.com/assets/images/my-profile.svg" />--%>
+                                        </div>
+                                        <span>My Profile</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a id="li_search" runat="server" href='~/profile/search.aspx'>
+                                        <div><i class="flaticon-search"></i></div>
+                                        <span>Search Freelancers</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" runat="server" href='~/profile/preferlist/index.aspx'>
+                                        <div><i class="flaticon-calendar"></i></div>
+                                        <span>Prefer List</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a runat="server" href='~/jobs/interview/myinterviews.aspx'>
+                                        <div><i class="flaticon-interview"></i></div>
+                                        <span>My Interviews</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a runat="server" href="~/projects/index.aspx">
+                                        <div><i class="flaticon-project-management"></i></div>
+                                        <span>Project Explorer</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="li_menu_myjobs" runat="server" visible="false" class="my-menu">
+                            <a id="myjobs_dropdownMenuButton" runat="server" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MY JOBS <span class="caret"></span></a>
+                            <ul class="dropdown-menu" aria-labelledby="findwork_dropdownMenuButton">
+                                <li><a class="dropdown-item" id="li_freelancer_jobs" runat="server" href='~/jobs/searchjobs/index.aspx'>My Jobs</a></li>
+                            </ul>
+                        </li>
+
+                        <li id="li_myjobs" runat="server" visible="false" class="my-menu">
+                            <a id="jobs_dropdownMenuButton" runat="server" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="trabau_menu"><i class="flaticon-menu-1"></i></div>
+                                <div class="trabau-mobile-menu">MAIN MENU</div>
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu" aria-labelledby="jobs_dropdownMenuButton">
+                                <%-- <li><a class="dropdown-item" id="create_project" runat="server" href='javascript:void(0);'>Create Project</a></li>--%>
+                                <li>
+                                    <a class="dropdown-item" runat="server" href="~/projects/new-project.aspx">
+                                        <div><i class="flaticon-project-management"></i></div>
+                                        <span>Create Project</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" id="all_posted_jobs" runat="server" href='~/jobs/posting/postedjobs.aspx'>
+                                        <div><i class="flaticon-verify"></i></div>
+                                        <span>My Jobs</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a runat="server" href="~/jobs/proposals/all-proposals.aspx">
+                                        <div><i class="flaticon-notebook"></i></div>
+                                        <span>Proposals</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" id="post_job" runat="server" href='~/jobs/posting//postjob.aspx'>
+                                        <div><i class="flaticon-edit"></i></div>
+                                        <span>Post a Job</span>
+                                    </a>
+
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" id="li_myhires" runat="server" href='~/jobs/hires/index.aspx'>
+                                        <div><i class="flaticon-leader"></i></div>
+                                        <span>My Hires</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" runat="server" href='~/profile/preferlist/index.aspx'>
+                                        <div><i class="flaticon-calendar"></i></div>
+                                        <span>Prefer List</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a runat="server" href='~/profile/search.aspx'>
+                                        <div><i class="flaticon-search"></i></div>
+                                        <span>Search Freelancers</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a runat="server" href='~/jobs/interview/index.aspx'>
+                                        <div><i class="flaticon-interview"></i></div>
+                                        <span>Interviews</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a runat="server" href="~/projects/index.aspx">
+                                        <div><i class="flaticon-project-management"></i></div>
+                                        <span>Project Explorer</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="li_admin" runat="server" visible="false" class="my-menu">
+                            <a id="admin_dropdownMenuButton" runat="server" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="trabau_menu"><i class="flaticon-menu-1"></i></div>
+                                <div class="trabau-mobile-menu">ADMIN</div>
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu" aria-labelledby="admin_dropdownMenuButton">
+                                <li>
+                                    <a class="dropdown-item" runat="server" href='~/admin/citymaster.aspx'>
+                                        <div><i class="flaticon-cityscape"></i></div>
+                                        <span>City Master</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" runat="server" href='~/admin/countrymaster.aspx'>
+                                        <div><i class="flaticon-coronavirus"></i></div>
+                                        <span>Country Master</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" runat="server" href='~/admin/statemaster.aspx'>
+                                        <div><i class="flaticon-capitol"></i></div>
+                                        <span>State Master</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" runat="server" href='~/admin/employment-rolemaster.aspx'>
+                                        <div><i class="flaticon-scrum"></i></div>
+                                        <span>Role Master</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" runat="server" href='~/admin/skillmaster.aspx'>
+                                        <div><i class="flaticon-logical-thinking"></i></div>
+                                        <span>Skill Master</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" runat="server" href='~/admin/document-categorymaster.aspx'>
+                                        <div><i class="flaticon-edit"></i></div>
+                                        <span>Document Master</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" runat="server" href='~/admin/services-categorymaster.aspx'>
+                                        <div><i class="flaticon-technical-support"></i></div>
+                                        <span>Services Category Master</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" runat="server" href='~/admin/generic-categories.aspx'>
+                                        <div><i class="flaticon-maintenance"></i></div>
+                                        <span>Generic Category Master</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="project-search">
+                        <input type="text" placeholder="Type to search" class="form-control project-search-input" />
+                        <button type="button" class="search-dd-icon btn-project-search"><i class="flaticon-search"></i></button>
+                        <button class="btn-project-search-close"><i class="fa fa-close"></i></button>
+                    </div>
+
+                    <ul class="float-right trabau-menu">
+                        <li id="li_welcome" runat="server" visible="false"><a href="#"><i style="color: #0bbc56; font-weight: normal">Welcome</i> &nbsp;<asp:Literal ID="ltrlName" runat="server"></asp:Literal></a></li>
+                        <li id="li_logout" runat="server" visible="false"><a href='<%= Page.ResolveUrl("~/login.aspx") %>' class="cta-btn-sm">Log Out</a></li>
+
+                        <li class="dropdown" id="li_menu" runat="server" visible="false">
+                            <div class="user-menu">
+                                <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img id="img_profile_pic_main" runat="server" alt="user pic" class="user-avtar" />
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <asp:Repeater ID="rAccounts" runat="server">
+                                        <ItemTemplate>
+                                            <asp:LinkButton class="dropdown-item" runat="server" ID="lbtnSwitchAccount" OnClick="lbtnSwitchAccount_Click">
+                                                <div class="d-flex">
+                                                    <img id="img_profile_pic" runat="server" alt="user pic" class="user-avtar" />
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-1">
+                                                            <div class="ellipsis">
+                                                                <%#Eval("FirstName") %>
+                                                                <asp:Label ID="lblUserId" runat="server" Visible="false" Text='<%#Eval("UserId") %>'></asp:Label>
+                                                                <asp:Label ID="lblUserType" runat="server" Visible="false" Text='<%#Eval("UserType") %>'></asp:Label>
+                                                                <asp:Label ID="lblFirstName" runat="server" Visible="false" Text='<%#Eval("FirstName") %>'></asp:Label>
+                                                                <asp:Label ID="lblFullName" runat="server" Visible="false" Text='<%#Eval("FullName") %>'></asp:Label>
+                                                            </div>
+                                                            <div class="org-type ellipsis" id="divUserType" runat="server"><%#Eval("UserTypeView") %></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </asp:LinkButton>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                    <a class="dropdown-item" href='<%= Page.ResolveUrl("~/profile/settings/") %>'><i class="fa fa-cog" aria-hidden="true"></i>Settings</a>
+                                    <a class="dropdown-item" href='<%= Page.ResolveUrl("~/login.aspx") %>'><i class="fa fa-sign-out" aria-hidden="true"></i>Log Out</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+
+
+
+
+        <div class="layout-page-content">
+            <div class="container-fluid">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+
+        <footer class="fix-footer text-center">
+            <div class="container">
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="policy/privacy.aspx">Privacy Policy</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+                <p>© All Rights Reserved 2020 | Trabau</p>
+            </div>
+        </footer>
+
+        <asp:UpdateProgress ID="UpdateProgress1" runat="server" DisplayAfter="0" style="z-index: 9999">
+            <ProgressTemplate>
+                <div id="loader-wrapper">
+                    <div id="loader">
+                        <img src='<%= Page.ResolveUrl("~/assets/images/loading.svg") %>'>
+                        <p>Loading...</p>
+                    </div>
+                </div>
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+        <cc1:AlwaysVisibleControlExtender ID="AlwaysVisibleControlExtender5" runat="server"
+            HorizontalSide="Center" TargetControlID="UpdateProgress1" VerticalSide="Middle"></cc1:AlwaysVisibleControlExtender>
+    </form>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src='<%= Page.ResolveUrl("~/assets/js/bootstrap.bundle.min.js") %>'></script>
+    <%--  <script src='<%= Page.ResolveUrl("~/assets/plugins/sweet-alert2/sweetalert2.min.js") %>'></script>--%>
+    <script src='<%= Page.ResolveUrl("~/assets/plugins/toastr/js/toastr.js") %>'></script>
+    <script src='<%= Page.ResolveUrl("~/assets/plugins/select2/js/select2.min.js") %>'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
+    <script src='<%= Page.ResolveUrl("~/assets/plugins/cookie/jquery.cookie.js") %>'></script>
+    <script>
+        var pathconfig_main = '<%= Page.ResolveUrl("~/profile/search.aspx") %>';
+        var pathconfig_hire = '<%= Page.ResolveUrl("~/hire.aspx") %>';
+    </script>
+    <%--<script src='<%= Page.ResolveUrl("~/assets/js/trabau-picture.js?version=1.1") %>'></script>--%>
+    <script src='<%= Page.ResolveUrl("~/assets/js/trabau-main.js?version=1.7") %>'></script>
+    <%--<script src='<%= Page.ResolveUrl("~/assets/js/trabau-utility.js?version=1.8") %>'></script>--%>
+
+    <script>
+        $(document).ready(function () {
+            $('.btn-project-search').click(function () {
+                $('.project-search-input').attr('style', 'display:inline-block !important');
+                $('.project-search-input').focus();
+                $('.btn-project-search-close').show();
+                $('.btn-project-search').hide();
+
+                return false;
+            });
+
+            $('.btn-project-search-close').click(function () {
+                $('.project-search-input').attr('style', 'display:none !important');
+                $('.btn-project-search-close').hide();
+                $('.btn-project-search').show();
+
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using TrabauClassLibrary.BLL;
+
+public partial class Login : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+
+
+    protected void UserAuthLogin_Authenticate(object sender, AuthenticateEventArgs e)
+    {
+        try
+        {
+            e.Authenticated = false;
+
+            string UserName = UserAuthLogin.UserName;
+            string Password = UserAuthLogin.Password;
+            string IPAddress = Request.UserHostAddress;
+            BLL_UserValidation obj = new BLL_UserValidation();
+            Tuple<List<dynamic>, string> data = obj.ValidateUser(UserName, Password, IPAddress);
+            if (data != null)
+            {
+                if (data.Item2 == "ok")
+                {
+                    if (data.Item1 != null)
+                    {
+                        List<dynamic> res = data.Item1;
+                        if (res[0].Response == "1")
+                        {
+                            FormsAuthenticationTicket ticket;
+                            ticket = GetAuthenticationTicket(UserAuthLogin.UserName, "C");
+                            string encryptedTicket = FormsAuthentication.Encrypt(ticket);
+                            HttpCookie cookie = new HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicket);
+                            Response.Cookies.Add(cookie);
+                            e.Authenticated = true;
+
+                            Session["Trabau_UserId"] = res[0].UserId;
+                            Session["Trabau_UserType"] = res[0].UserType;
+                            Response.Redirect(res[0].RedirectURL);
+                        }
+                    }
+                }
+            }
+        }
+        catch (Exception)
+        {
+
+        }
+
+    }
+
+    private FormsAuthenticationTicket GetAuthenticationTicket(string userName, string roles)
+    {
+        FormsAuthenticationTicket tempTicket = new
+                                                FormsAuthenticationTicket
+                                                (1,
+                                                userName,
+                                                DateTime.Now,
+                                                DateTime.Now.AddMinutes(200),
+                                                false,
+                                                roles);
+
+        return tempTicket;
+    }
+}

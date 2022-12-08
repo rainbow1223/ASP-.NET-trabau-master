@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class login1 : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void btnlogin_Click(object sender, EventArgs e)
+    {
+        string clientid = "743689144269-171ngj2ujdcmpuno4mvmtplo5jarbn68.apps.googleusercontent.com";
+        string clientsecret = "QKGxQkIfAQ8P8C15lCHZCX77";
+        string redirection_url = "http://www.trabau.com/index1.aspx";
+        string url = "https://accounts.google.com/o/oauth2/v2/auth?scope=profile email&include_granted_scopes=true&redirect_uri=" + redirection_url + "&response_type=code&client_id=" + clientid + "";
+        Response.Redirect(url);
+    }
+}
